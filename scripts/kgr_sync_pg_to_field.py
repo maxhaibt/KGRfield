@@ -3,16 +3,18 @@
 KGR Sync: PostgreSQL -> iDAI.field (initial full sync)
 Builds the complete iDAI.field project from the kgr_2024_dai PostgreSQL schema.
 
-iDAI.field hierarchy (confirmed from test DB + GUI):
+iDAI.field hierarchy (using standard categories):
 
   Place: Einsatzort                -> relations: {}  (top-level)
     +-- Survey: OA-xx              -> liesWithin: [Einsatzort]
     |     +-- Find: ...            -> isRecordedIn: [OA-xx]
     +-- Building: B-xx             -> liesWithin: [Einsatzort]
-    |     +-- Level: ...           -> isRecordedIn: [B-xx]
-    |     +-- Damage: ...          -> isRecordedIn: [B-xx]
+    |     +-- Room: L-xx           -> isRecordedIn: [B-xx]
+    |     +-- Damage: D-xx         -> isRecordedIn: [B-xx]
+    |     +-- OuterWall: B-xx-OW   -> isRecordedIn: [B-xx]
+    |     +-- Roof: B-xx-Roof      -> isRecordedIn: [B-xx]
     +-- Survey: Unzugeordnet       -> liesWithin: [Einsatzort]  (orphan catch-all)
-          +-- Find/Damage: ...     -> isRecordedIn: [Unzugeordnet]
+          +-- Find: ...            -> isRecordedIn: [Unzugeordnet]
 
   Rules:
     - Place is top-level: relations = {}
@@ -22,8 +24,8 @@ iDAI.field hierarchy (confirmed from test DB + GUI):
     - Place can ONLY contain Operations (not Finds/Damage directly)
     - Damage can ONLY live under Building (not Survey)
 
-Uses an improved configuration (output/kgr_improved_config.json) that includes
-valuelist definitions from the PostgreSQL 'listen' schema.
+Uses a config overlay (config/kgr_config_overlay.json) that adds KGR-specific
+fields and valuelists to standard built-in categories. No KGR config import needed.
 
 Usage:
     conda run -n gisfield python various_scripts/kgr_sync_pg_to_field.py
@@ -63,6 +65,7 @@ PREFIX = USER_CONFIG.get('prefix', 'kgr_chru_datamodel')
 DRY_RUN = USER_CONFIG.get('dry_run', False)
 
 IMPROVED_CONFIG_PATH = os.path.join(PROJECT_DIR, USER_CONFIG['improved_config_path'])
+OVERLAY_CONFIG_PATH = os.path.join(PROJECT_DIR, 'config', 'kgr_config_overlay.json')
 PLACE_IDENTIFIER = USER_CONFIG.get('place_identifier', 'Einsatzort')
 ORPHAN_SURVEY_IDENTIFIER = USER_CONFIG.get('orphan_survey_identifier', 'Unzugeordnet')
 DATE_DEFAULT_TIME = USER_CONFIG.get('date_default_time', '00:00')
@@ -329,7 +332,7 @@ CHECKBOXES_FIELDS = {
 }
 
 MULTI_INPUT_FIELDS = {
-    'operationalAreaId',  # Damage:default
+    'operationalAreaId',  # Damage
 }
 
 # Value normalization: PG abbreviations/typos -> config valuelist keys
@@ -435,7 +438,7 @@ PG_TO_KGR_CONDITION = {
     '0': 'CCO', '1': 'CC1', '2': 'CC2', '3': 'CC3', '4': 'CC4',
 }
 
-# PG condition_class → level-kgr (for Kgr:Damage)
+# PG condition_class → level-kgr (for Damage)
 PG_TO_KGR_DAMAGE_LEVEL = {
     'CC0': '1-SehrGering', 'CC1': '2-Gering', 'CC2': '3-Mittel',
     'CC3': '4-Schwer', 'CC4': '5-SehrSchwer',
@@ -458,7 +461,7 @@ PG_TO_KGR_RISK = {
     'Impact on Safety': 'riskofinjury',
 }
 
-# PG component_primary → used for Kgr:Damage 'location' field (free text)
+# PG component_primary → used for Damage 'location' field (free text)
 PG_TO_KGR_LOCATION = {
     'Facade': 'Fassade',
     'Wall': 'Wand',
@@ -482,7 +485,7 @@ BUILDING_KGR_MAP = {
     'recommendation_class': ('buildingPriority', PG_TO_KGR_PRIORITY),
 }
 
-# PG facade columns that map to Kgr:WallOutside fields
+# PG facade columns that map to OuterWall (standard) KGR fields
 FACADE_KGR_MAP = {
     'facade_material': ('wallOutsideMaterial', PG_TO_KGR_FACADE_MATERIAL),
     'facade_damage': ('wallOutsideDamages', PG_TO_KGR_DAMAGE),
@@ -490,7 +493,7 @@ FACADE_KGR_MAP = {
     'facade_notes': ('wallOutsideNotes', None),  # direct text
 }
 
-# PG roof columns that map to Kgr:RoofOutside fields
+# PG roof columns that map to Roof (standard) KGR fields
 ROOF_KGR_MAP = {
     'roof_type': ('roofOutsideType', PG_TO_KGR_ROOF_TYPE),
     'roof_material_construction': ('roofConstruction', PG_TO_KGR_ROOF_CONSTRUCTION),
@@ -500,7 +503,7 @@ ROOF_KGR_MAP = {
     'roof_notes': ('roofOutsideNotes', None),  # direct text
 }
 
-# PG damage columns that map to Kgr:Damage fields
+# PG damage columns that map to Damage (standard) KGR fields
 DAMAGE_KGR_MAP = {
     'damage_type': ('damages-kgr-str', PG_TO_KGR_DAMAGE),
     'condition_class': ('damage-level', PG_TO_KGR_DAMAGE_LEVEL),
@@ -539,8 +542,8 @@ DAMAGE_CUSTOM_MAP = {
 BUILTIN_DATE_COLUMNS = {
     'Survey': 'date',
     'Building': 'date',
-    'Level': 'date',
-    'Kgr:Damage': 'date',
+    'Room': 'date',
+    'Damage': 'date',
     # Find has no general 'date' column - only workflow-specific dates
 }
 
@@ -548,8 +551,8 @@ BUILTIN_DATE_COLUMNS = {
 BUILTIN_PROCESSOR_COLUMNS = {
     'Survey': 'processor',
     'Building': 'processor',
-    'Level': 'processor',
-    'Kgr:Damage': 'processor',
+    'Room': 'processor',
+    'Damage': 'processor',
     # Find has no general processor - only workflow-specific processors
 }
 
@@ -565,14 +568,14 @@ BUILTIN_DESC_COLUMNS = {
     'Survey': 'site_description',
     'Building': 'building_notes',
     'Find': 'notes',
-    'Kgr:Damage': 'notes',
-    'Level': 'notes_dec',
+    'Damage': 'notes',
+    'Room': 'notes_dec',
 }
 
 # PG columns that map to the built-in 'condition' field (checkboxes = array)
-# Disabled for Kgr:Damage — condition_class is mapped to KGR 'damage-level' instead
+# Disabled for Damage — condition_class is mapped to KGR 'damage-level' instead
 BUILTIN_CONDITION_COLUMNS = {
-    # 'Kgr:Damage': 'condition_class',  # Now mapped via DAMAGE_KGR_MAP
+    # 'Damage': 'condition_class',  # Now mapped via DAMAGE_KGR_MAP
 }
 
 # Custom fields that use the iDAI.field date format {"value": "DD.MM.YYYY HH:MM"}
@@ -944,14 +947,18 @@ def ensure_project_and_config():
 
 
 def apply_kgr_config():
-    """Step A: Add custom PG fields to the existing KGR configuration.
+    """Step A: Merge KGR config overlay into the project configuration.
 
-    Assumes the KGR configuration has already been imported by the user
-    via Field Desktop's configuration import feature. This function only
-    adds kgr_chru_datamodel:* field definitions for PG columns that have
-    no KGR field equivalent, plus ensures Level is in the order.
+    Loads the permanent config overlay (config/kgr_config_overlay.json) and
+    merges it into the existing project configuration. This adds KGR-specific
+    fields, valuelists, and groups to standard categories (Building, Damage,
+    OuterWall, Roof, etc.) and creates non-standard Kgr: categories
+    (Equipment, FindRecording, etc.).
+
+    No prior KGR config import is needed — the overlay provides everything.
+    Then adds kgr_chru_datamodel:* fields for PG columns without KGR equivalents.
     """
-    print("\n--- Step A: Add custom PG fields to existing KGR config ---")
+    print("\n--- Step A: Merge KGR config overlay + add custom PG fields ---")
 
     # 1. Read current config from CouchDB
     resp = requests.get(f'{FIELD_URL}/{FIELD_DB}/configuration', auth=FIELD_AUTH)
@@ -961,21 +968,99 @@ def apply_kgr_config():
     print(f"  Existing config: {len(existing_forms)} forms, {len(existing_order)} order items")
     print(f"  Config rev: {config_doc.get('_rev', '?')}")
 
-    # Verify KGR config is present (check for Kgr: categories)
-    kgr_cats = [k for k in existing_forms if k.startswith('Kgr:')]
-    if not kgr_cats:
-        print("  ERROR: No Kgr: categories found in project configuration!")
-        print("  The KGR configuration MUST be imported in Field Desktop BEFORE running this script.")
-        print("  Steps: Field Desktop -> Project -> Settings -> Import Configuration -> select kgr.configuration file")
-        print("\n  ABORTING. Please import the KGR configuration and try again.")
+    # 2. Load the KGR config overlay
+    if not os.path.exists(OVERLAY_CONFIG_PATH):
+        print(f"  ERROR: Overlay config not found: {OVERLAY_CONFIG_PATH}")
+        print("  ABORTING.")
         return False
-    else:
-        print(f"  KGR categories found: {len(kgr_cats)} ({', '.join(kgr_cats[:5])}...)")
 
-    # 2. Add custom kgr_chru_datamodel:* fields for unmapped PG columns
+    with open(OVERLAY_CONFIG_PATH, 'r', encoding='utf-8') as f:
+        overlay = json.load(f)
+
+    overlay_forms = overlay.get('forms', {})
+    overlay_order = overlay.get('order', [])
+    print(f"  Overlay: {len(overlay_forms)} forms, {len(overlay_order)} order items")
+
+    # 3. Check if overlay is already applied (idempotency)
+    building_form = existing_forms.get('Building:default', {})
+    if 'buildingTypeKGR' in building_form.get('fields', {}):
+        print("  KGR overlay already applied (buildingTypeKGR found in Building:default)")
+    else:
+        print("  Applying KGR overlay...")
+
+    # 4. Merge overlay forms into existing config
+    forms = config_doc['resource'].setdefault('forms', {})
+    for form_key, overlay_form in overlay_forms.items():
+        if form_key not in forms:
+            # New form (e.g., Kgr:Equipment) — add it entirely
+            forms[form_key] = overlay_form
+            print(f"  NEW form: {form_key}")
+        else:
+            # Existing form — merge fields, valuelists, hidden, groups
+            existing_form = forms[form_key]
+
+            # Merge hidden list (extend, avoid duplicates)
+            if 'hidden' in overlay_form:
+                existing_hidden = set(existing_form.get('hidden', []))
+                merged_hidden = list(existing_form.get('hidden', []))
+                for h in overlay_form['hidden']:
+                    if h not in existing_hidden:
+                        merged_hidden.append(h)
+                existing_form['hidden'] = merged_hidden
+
+            # Merge fields (overlay wins for new fields, keeps existing)
+            if 'fields' in overlay_form:
+                existing_fields = existing_form.setdefault('fields', {})
+                for fname, fdef in overlay_form['fields'].items():
+                    if fname not in existing_fields:
+                        existing_fields[fname] = fdef
+
+            # Merge valuelists (overlay wins for new mappings)
+            if 'valuelists' in overlay_form:
+                existing_vls = existing_form.setdefault('valuelists', {})
+                for vfield, vname in overlay_form['valuelists'].items():
+                    if vfield not in existing_vls:
+                        existing_vls[vfield] = vname
+
+            # Merge groups (add new groups by name, don't duplicate)
+            if 'groups' in overlay_form:
+                existing_groups = existing_form.setdefault('groups', [])
+                existing_group_names = {g.get('name') for g in existing_groups}
+                for grp in overlay_form['groups']:
+                    if grp.get('name') not in existing_group_names:
+                        existing_groups.append(grp)
+
+            # Set parent if specified in overlay (for custom categories)
+            if 'parent' in overlay_form:
+                existing_form['parent'] = overlay_form['parent']
+
+            print(f"  MERGED form: {form_key}")
+
+    # 5. Merge overlay order into existing order
+    order = config_doc['resource'].setdefault('order', [])
+    order_set = set(order)
+    added_order = 0
+    for item in overlay_order:
+        if item not in order_set:
+            order.append(item)
+            order_set.add(item)
+            added_order += 1
+    if added_order:
+        print(f"  Added {added_order} items to order (total: {len(order)})")
+
+    # 6. Merge overlay languages (if present)
+    if 'languages' in overlay:
+        existing_langs = config_doc['resource'].setdefault('languages', {})
+        for lang, translations in overlay['languages'].items():
+            existing_trans = existing_langs.setdefault(lang, {})
+            for key, val in translations.items():
+                if key not in existing_trans:
+                    existing_trans[key] = val
+
+    # 7. Add custom kgr_chru_datamodel:* fields for unmapped PG columns
     add_custom_pg_fields(config_doc)
 
-    # 3. PUT updated configuration back to CouchDB
+    # 8. PUT updated configuration back to CouchDB
     resp = requests.put(f'{FIELD_URL}/{FIELD_DB}/configuration',
                         auth=FIELD_AUTH, json=config_doc)
     if resp.status_code == 201:
@@ -1009,15 +1094,15 @@ def add_custom_pg_fields(config_doc):
             (fs, _get_input_type(fs), _get_valuelist(fs, 'Building'))
             for fs in BUILDING_CUSTOM_MAP.values()
         ],
-        'Level:default': [
-            (fs, _get_input_type(fs), _get_valuelist(fs, 'Level'))
+        'Room:default': [
+            (fs, _get_input_type(fs), _get_valuelist(fs, 'Room'))
             for fs in LEVEL_MAP.values()
         ],
         'Find:default': [
             (fs, _get_input_type(fs), _get_valuelist(fs, 'Find'))
             for fs in FIND_MAP.values()
         ],
-        'Kgr:Damage': [
+        'Damage:default': [
             (fs, _get_input_type(fs), _get_valuelist(fs, 'Damage'))
             for fs in DAMAGE_CUSTOM_MAP.values()
         ],
@@ -1061,19 +1146,7 @@ def add_custom_pg_fields(config_doc):
     # KGR valuelists are built-in to Field Desktop. Custom fields use
     # inputType 'input' (free text) and don't need valuelists.
 
-    # Ensure all categories we sync to are in the order list
-    order = config_doc['resource'].setdefault('order', [])
-    order_set = set(order)
-    needed_in_order = ['Level']  # Level is not in KGR config but we sync floor data
-    for cat in needed_in_order:
-        if cat not in order_set:
-            # Insert after Building
-            try:
-                idx = order.index('Building') + 1
-            except ValueError:
-                idx = len(order)
-            order.insert(idx, cat)
-            print(f"  Added '{cat}' to order at position {idx}")
+    # Order is handled by the overlay merge in apply_kgr_config()
 
     # Count what we added
     total_custom = sum(
@@ -1162,11 +1235,17 @@ def pg_to_geojson(row):
 
 
 def read_geo_table(query, engine, geom_col='geom'):
-    """Read a PostGIS table as GeoDataFrame with reprojection to WGS84."""
+    """Read a PostGIS table as GeoDataFrame, keeping native CRS (EPSG:3857).
+
+    Field Desktop uses a simple euclidean coordinate system without projection.
+    EPSG:3857 (Web Mercator, meters) preserves shape better than WGS84 (degrees)
+    because X and Y use the same unit. The coordinates are large (~769000, ~6652000)
+    but Field Desktop handles them as-is and assigns a VRS name.
+    """
     try:
         gdf = gpd.read_postgis(query, engine, geom_col=geom_col)
-        if gdf.crs and gdf.crs.to_epsg() != 4326:
-            gdf = gdf.to_crs(epsg=4326)
+        if gdf.crs:
+            print(f"    CRS: {gdf.crs.to_epsg()} (keeping native)")
         return gdf
     except Exception as e:
         print(f"  WARNING: PostGIS read failed ({e}), falling back to plain SQL")
@@ -1333,7 +1412,7 @@ def map_kgr_fields(row, kgr_map):
 
 
 def make_wall_outside_doc(building_row, building_identifier, building_rid):
-    """Create a Kgr:WallOutside document from PG facade_* columns.
+    """Create an OuterWall document from PG facade_* columns.
 
     Returns (doc, rid) or (None, None) if no facade data.
     """
@@ -1360,14 +1439,14 @@ def make_wall_outside_doc(building_row, building_identifier, building_rid):
         return None, None
 
     rid = make_id()
-    identifier = f"{building_identifier}-WallOutside"
+    identifier = f"{building_identifier}-OuterWall"
     relations = {'isRecordedIn': [building_rid]}
 
     now = pd.Timestamp.now().strftime('%Y-%m-%dT%H:%M:%S.000Z')
     resource = {
         'id': rid,
         'identifier': identifier,
-        'category': 'Kgr:WallOutside',
+        'category': 'OuterWall',
         'relations': relations,
     }
     resource.update(all_fields)
@@ -1382,7 +1461,7 @@ def make_wall_outside_doc(building_row, building_identifier, building_rid):
 
 
 def make_roof_outside_doc(building_row, building_identifier, building_rid):
-    """Create a Kgr:RoofOutside document from PG roof_* columns.
+    """Create a Roof document from PG roof_* columns.
 
     Returns (doc, rid) or (None, None) if no roof data.
     """
@@ -1409,14 +1488,14 @@ def make_roof_outside_doc(building_row, building_identifier, building_rid):
         return None, None
 
     rid = make_id()
-    identifier = f"{building_identifier}-RoofOutside"
+    identifier = f"{building_identifier}-Roof"
     relations = {'isRecordedIn': [building_rid]}
 
     now = pd.Timestamp.now().strftime('%Y-%m-%dT%H:%M:%S.000Z')
     resource = {
         'id': rid,
         'identifier': identifier,
-        'category': 'Kgr:RoofOutside',
+        'category': 'Roof',
         'relations': relations,
     }
     resource.update(all_fields)
@@ -1559,7 +1638,7 @@ def main():
         print("ABORT: DB initialization failed!")
         return
     if not apply_kgr_config():
-        print("ABORT: KGR config application failed!")
+        print("ABORT: KGR config overlay application failed!")
         return
     # Standalone valuelists NOT needed — KGR valuelists are built-in to Field Desktop
 
@@ -1684,19 +1763,19 @@ def main():
         doc = make_doc(rid, identifier, 'Building', fields, relations, geometry, row=row)
         new_docs.append(doc)
 
-        # Create Kgr:WallOutside subcategory document from facade_* columns
+        # Create OuterWall subcategory document from facade_* columns
         wall_doc, wall_rid = make_wall_outside_doc(row, identifier, rid)
         if wall_doc:
             new_docs.append(wall_doc)
-            print(f"  NEW: {identifier} ({bname}) + WallOutside")
+            print(f"  NEW: {identifier} ({bname}) + OuterWall")
         else:
             print(f"  NEW: {identifier} ({bname})")
 
-        # Create Kgr:RoofOutside subcategory document from roof_* columns
+        # Create Roof subcategory document from roof_* columns
         roof_doc, roof_rid = make_roof_outside_doc(row, identifier, rid)
         if roof_doc:
             new_docs.append(roof_doc)
-            print(f"       + RoofOutside")
+            print(f"       + Roof")
 
     # ----------------------------------------------------------
     # 2b. SURVEY "Unzugeordnet" (catch-all for orphan Finds)
@@ -1717,9 +1796,9 @@ def main():
     first_building_id = next(iter(building_id_map.values()), None)
 
     # ----------------------------------------------------------
-    # 3. LEVELS (floors/rooms)
+    # 3. ROOMS (floors/rooms) — using standard Room category
     # ----------------------------------------------------------
-    print("\n--- Levels (floors) ---")
+    print("\n--- Rooms (floors) ---")
     floor_tables = ['floor-1', 'floor0', 'floor1', 'floor2', 'floor3']
     for ftable in floor_tables:
         try:
@@ -1755,7 +1834,7 @@ def main():
             if building_rid:
                 relations['isRecordedIn'] = [building_rid]
 
-            doc = make_doc(rid, identifier, 'Level', fields, relations, geometry, row=row)
+            doc = make_doc(rid, identifier, 'Room', fields, relations, geometry, row=row)
             new_docs.append(doc)
             print(f"    NEW: {identifier}")
 
@@ -1842,13 +1921,13 @@ def main():
             # Map custom PG fields (unmapped columns stay as kgr_chru_datamodel:*)
             fields = map_row(row, DAMAGE_CUSTOM_MAP)
 
-            # Map PG columns to Kgr:Damage KGR fields
+            # Map PG columns to Damage KGR fields
             kgr_fields = map_kgr_fields(row, DAMAGE_KGR_MAP)
             fields.update(kgr_fields)
 
             geometry = pg_to_geojson(row)
 
-            # Relation: isRecordedIn -> Building (Kgr:Damage is a BuildingPart)
+            # Relation: isRecordedIn -> Building (Damage is a BuildingPart)
             relations = {}
             building_rid = building_id_map.get(row.get('building_id'))
             if building_rid:
@@ -1859,12 +1938,12 @@ def main():
             else:
                 print(f"    WARNING: {identifier} has no building and no fallback!")
 
-            # Use Kgr:Damage category (developer's KGR subcategory, not built-in Damage)
-            doc = make_doc(rid, identifier, 'Kgr:Damage', fields, relations, geometry, row=row)
+            # Use standard Damage category with KGR overlay fields
+            doc = make_doc(rid, identifier, 'Damage', fields, relations, geometry, row=row)
             new_docs.append(doc)
             damage_count += 1
 
-    print(f"  Created {damage_count} Kgr:Damage docs")
+    print(f"  Created {damage_count} Damage docs")
 
     # ----------------------------------------------------------
     # SAVE

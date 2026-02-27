@@ -1,0 +1,1774 @@
+{
+  "forms": {
+    "Building:default": {
+      "hidden": [
+        "material",
+        "context",
+        "condition",
+        "conditionAmount",
+        "conditionComment",
+        "hasRestoration",
+        "buildingType",
+        "buildingTechnique",
+        "buildingCategory",
+        "buildingCategorySpecific",
+        "buildingResearchHistory"
+      ],
+      "valuelists": {
+        "buildingTypeKGR": "BuildingType-kgr",
+        "buildingCategoryKGR": "BuildingCategory-kgr",
+        "buildingMaterialKGR": "Building-material-kgr",
+        "buildingTechniqueKGR": "Building-technique-kgr",
+        "buildingConstructionKGR": "Building-construction-kgr",
+        "monumentSignificance": "Monument-significance-kgr",
+        "buildingDamage-str": "damages-kgr-str",
+        "buildingDamage-mat": "damages-kgr-mat",
+        "buildingRisks": "Monument-risks-kgr",
+        "monumentRisks": "risks-kgr",
+        "buildingCondition": "Building-condition-kgr",
+        "buildingPriority": "priority-kgr",
+        "monumentFirstAid": "firstAid-kgr"
+      },
+      "fields": {
+        "buildingAddress": {
+          "inputType": "input"
+        },
+        "buildingState": {
+          "inputType": "input"
+        },
+        "buildingCity": {
+          "inputType": "input"
+        },
+        "buildingDescriptionKGR": {
+          "inputType": "input"
+        },
+        "buildingTypeKGR": {
+          "inputType": "dropdown"
+        },
+        "buildingTypeKGR-other": {
+          "inputType": "input"
+        },
+        "buildingCategoryKGR": {
+          "inputType": "dropdown"
+        },
+        "buildingCategoryKGR-other": {
+          "inputType": "input"
+        },
+        "buildingMaterialKGR": {
+          "inputType": "checkboxes"
+        },
+        "buildingMaterialKGR-other": {
+          "inputType": "input"
+        },
+        "buildingTechniqueKGR": {
+          "inputType": "checkboxes"
+        },
+        "buildingTechniqueKGR-other": {
+          "inputType": "input"
+        },
+        "buildingConstructionKGR": {
+          "inputType": "checkboxes"
+        },
+        "buildingConstructionKGR-other": {
+          "inputType": "input"
+        },
+        "buildingStoreys": {
+          "inputType": "input"
+        },
+        "monumentSignificance": {
+          "inputType": "dropdown"
+        },
+        "buildingNotes": {
+          "inputType": "text"
+        },
+        "monumentAccessibility": {
+          "inputType": "input"
+        },
+        "buildingDamage-str": {
+          "inputType": "checkboxes"
+        },
+        "buildingDamage-mat": {
+          "inputType": "checkboxes"
+        },
+        "otherRisksKGR": {
+          "inputType": "input"
+        },
+        "buildingRisks": {
+          "inputType": "checkboxes"
+        },
+        "buildingRisks-other": {
+          "inputType": "input"
+        },
+        "monumentRisks": {
+          "inputType": "checkboxes"
+        },
+        "monumentRisks-other": {
+          "inputType": "input"
+        },
+        "buildingCondition": {
+          "inputType": "dropdown"
+        },
+        "buildingPriority": {
+          "inputType": "dropdown"
+        },
+        "monumentFirstAid": {
+          "inputType": "checkboxes"
+        },
+        "furtherProcedure": {
+          "inputType": "input"
+        },
+        "buildingArchitect": {
+          "inputType": "input"
+        },
+        "buildingMonumentStatus": {
+          "inputType": "input"
+        },
+        "monumentOccupation": {
+          "inputType": "input"
+        },
+        "buildingOwner": {
+          "inputType": "input"
+        },
+        "monumentAdministration": {
+          "inputType": "input"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "buildingAddress",
+            "buildingState",
+            "buildingCity",
+            "buildingDescriptionKGR",
+            "buildingTypeKGR",
+            "buildingTypeKGR-other",
+            "buildingCategoryKGR",
+            "buildingCategoryKGR-other",
+            "buildingMaterialKGR",
+            "buildingMaterialKGR-other",
+            "buildingTechniqueKGR",
+            "buildingTechniqueKGR-other",
+            "buildingConstructionKGR",
+            "buildingConstructionKGR-other",
+            "buildingStoreys",
+            "monumentSignificance",
+            "buildingNotes",
+            "monumentAccessibility",
+            "buildingDamage-str",
+            "buildingDamage-mat",
+            "otherRisksKGR",
+            "buildingRisks",
+            "buildingRisks-other",
+            "monumentRisks",
+            "monumentRisks-other",
+            "buildingCondition",
+            "buildingPriority",
+            "monumentFirstAid",
+            "furtherProcedure",
+            "buildingArchitect",
+            "buildingMonumentStatus",
+            "monumentOccupation",
+            "buildingOwner",
+            "monumentAdministration"
+          ]
+        }
+      ]
+    },
+    "BuildingPart:default": {
+      "hidden": [],
+      "fields": {
+        "level": {
+          "inputType": "input"
+        }
+      }
+    },
+    "OuterWall:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "wallOutsideMaterial": "Building-material-kgr",
+        "wallOutsideTechnique": "Building-technique-kgr",
+        "wallOutsideConstruction": "Building-construction-kgr",
+        "wallOutsideDamages": "damages-kgr",
+        "wallOutsideCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "wallOutsideOrientation": {
+          "inputType": "input"
+        },
+        "wallOutsideMaterial": {
+          "inputType": "checkboxes"
+        },
+        "wallOutsideMaterial-other": {
+          "inputType": "input"
+        },
+        "wallOutsideTechnique": {
+          "inputType": "checkboxes"
+        },
+        "wallOutsideTechnique-other": {
+          "inputType": "input"
+        },
+        "wallOutsideConstruction": {
+          "inputType": "checkboxes"
+        },
+        "wallOutsideConstruction-other": {
+          "inputType": "input"
+        },
+        "wallOutsideDamages": {
+          "inputType": "checkboxes"
+        },
+        "wallOutsideDamages-other": {
+          "inputType": "input"
+        },
+        "wallOutsideCondition": {
+          "inputType": "dropdown"
+        },
+        "wallOutsideNotes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "wallOutsideOrientation",
+            "wallOutsideMaterial",
+            "wallOutsideMaterial-other",
+            "wallOutsideTechnique",
+            "wallOutsideTechnique-other",
+            "wallOutsideConstruction",
+            "wallOutsideConstruction-other",
+            "wallOutsideDamages",
+            "wallOutsideDamages-other",
+            "wallOutsideCondition",
+            "wallOutsideNotes"
+          ]
+        }
+      ]
+    },
+    "Roof:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "roofOutsideMaterial": "roofing-kgr",
+        "roofOutsideDamages": "damages-kgr",
+        "roofOutsideCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "roofOutsideType": {
+          "inputType": "input"
+        },
+        "roofConstruction": {
+          "inputType": "input"
+        },
+        "roofConstructionMaterial": {
+          "inputType": "input"
+        },
+        "roofOutsideMaterial": {
+          "inputType": "checkboxes"
+        },
+        "roofOutsideMaterial-other": {
+          "inputType": "input"
+        },
+        "roofOutsideDamages": {
+          "inputType": "checkboxes"
+        },
+        "roofOutsideDamages-other": {
+          "inputType": "input"
+        },
+        "roofOutsideCondition": {
+          "inputType": "checkboxes"
+        },
+        "roofOutsideNotes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "roofOutsideType",
+            "roofConstruction",
+            "roofConstructionMaterial",
+            "roofOutsideMaterial",
+            "roofOutsideMaterial-other",
+            "roofOutsideDamages",
+            "roofOutsideDamages-other",
+            "roofOutsideCondition",
+            "roofOutsideNotes"
+          ]
+        }
+      ]
+    },
+    "InnerWall:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "wallInsideMaterial": "Building-material-kgr",
+        "wallInsideTechnique": "Building-technique-kgr",
+        "wallInsideConstruction": "Building-construction-kgr",
+        "wallInsideDamages": "damages-kgr",
+        "wallInsideCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "wallInsideOrientation": {
+          "inputType": "input"
+        },
+        "wallInsideDimensions": {
+          "inputType": "input"
+        },
+        "wallInsideMaterial": {
+          "inputType": "checkboxes"
+        },
+        "wallInsideMaterial-other": {
+          "inputType": "input"
+        },
+        "wallInsideTechnique": {
+          "inputType": "checkboxes"
+        },
+        "wallInsideTechnique-other": {
+          "inputType": "input"
+        },
+        "wallInsideConstruction": {
+          "inputType": "checkboxes"
+        },
+        "wallInsideConstruction-other": {
+          "inputType": "input"
+        },
+        "wallInsideDamages": {
+          "inputType": "checkboxes"
+        },
+        "wallInsideDamages-other": {
+          "inputType": "input"
+        },
+        "wallInsideCondition": {
+          "inputType": "dropdown"
+        },
+        "WallInsideNotes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "wallInsideOrientation",
+            "wallInsideDimensions",
+            "wallInsideMaterial",
+            "wallInsideMaterial-other",
+            "wallInsideTechnique",
+            "wallInsideTechnique-other",
+            "wallInsideConstruction",
+            "wallInsideConstruction-other",
+            "wallInsideDamages",
+            "wallInsideDamages-other",
+            "wallInsideCondition",
+            "WallInsideNotes"
+          ]
+        }
+      ]
+    },
+    "RoomFloor:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "floorMaterial": "Building-material-kgr",
+        "floorTechnique": "Building-technique-kgr",
+        "floorDamages": "damages-kgr",
+        "floorCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "floorlevel": {
+          "inputType": "input"
+        },
+        "floorDimensions": {
+          "inputType": "input"
+        },
+        "floorMaterial": {
+          "inputType": "checkboxes"
+        },
+        "floorMaterial-other": {
+          "inputType": "input"
+        },
+        "floorTechnique": {
+          "inputType": "checkboxes"
+        },
+        "floorTechnique-other": {
+          "inputType": "input"
+        },
+        "floorDamages": {
+          "inputType": "checkboxes"
+        },
+        "floorDamages-other": {
+          "inputType": "input"
+        },
+        "floorCondition": {
+          "inputType": "dropdown"
+        },
+        "floorNotes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "floorlevel",
+            "floorDimensions",
+            "floorMaterial",
+            "floorMaterial-other",
+            "floorTechnique",
+            "floorTechnique-other",
+            "floorDamages",
+            "floorDamages-other",
+            "floorCondition",
+            "floorNotes"
+          ]
+        }
+      ]
+    },
+    "RoomCeiling:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "ceilingMaterial": "Building-material-kgr",
+        "ceilingTechnique": "Building-technique-kgr",
+        "ceilingConstruction": "Building-construction-kgr",
+        "ceilingDamages": "damages-kgr",
+        "ceilingCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "ceilinglevel": {
+          "inputType": "input"
+        },
+        "ceilingDimensions": {
+          "inputType": "input"
+        },
+        "ceilingMaterial": {
+          "inputType": "checkboxes"
+        },
+        "ceilingMaterial-other": {
+          "inputType": "input"
+        },
+        "ceilingTechnique": {
+          "inputType": "checkboxes"
+        },
+        "ceilingTechnique-other": {
+          "inputType": "input"
+        },
+        "ceilingConstruction": {
+          "inputType": "checkboxes"
+        },
+        "ceilingConstruction-other": {
+          "inputType": "input"
+        },
+        "ceilingDamages": {
+          "inputType": "checkboxes"
+        },
+        "ceilingDamages-other": {
+          "inputType": "input"
+        },
+        "ceilingCondition": {
+          "inputType": "dropdown"
+        },
+        "ceilingNotes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "ceilinglevel",
+            "ceilingDimensions",
+            "ceilingMaterial",
+            "ceilingMaterial-other",
+            "ceilingTechnique",
+            "ceilingTechnique-other",
+            "ceilingConstruction",
+            "ceilingConstruction-other",
+            "ceilingDamages",
+            "ceilingDamages-other",
+            "ceilingCondition",
+            "ceilingNotes"
+          ]
+        }
+      ]
+    },
+    "Stairs:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "stairsCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "stairsForm": {
+          "inputType": "input"
+        },
+        "stairslevel": {
+          "inputType": "input"
+        },
+        "stairsDimensions": {
+          "inputType": "input"
+        },
+        "stairsMaterial": {
+          "inputType": "input"
+        },
+        "stairsTechnique": {
+          "inputType": "input"
+        },
+        "stairsDamages": {
+          "inputType": "input"
+        },
+        "stairsCondition": {
+          "inputType": "dropdown"
+        },
+        "stairsDescription": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "stairsForm",
+            "stairslevel",
+            "stairsDimensions",
+            "stairsMaterial",
+            "stairsTechnique",
+            "stairsDamages",
+            "stairsCondition",
+            "stairsDescription"
+          ]
+        }
+      ]
+    },
+    "Window:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "windowDamages": "damages-kgr",
+        "windowCondition": "Building-condition-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "windowType": {
+          "inputType": "text"
+        },
+        "windowDimensions": {
+          "inputType": "input"
+        },
+        "windowMaterial": {
+          "inputType": "input"
+        },
+        "windowDamages": {
+          "inputType": "checkboxes"
+        },
+        "windowCondition": {
+          "inputType": "dropdown"
+        },
+        "windowDescription": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "windowType",
+            "windowDimensions",
+            "windowMaterial",
+            "windowDamages",
+            "windowCondition",
+            "windowDescription"
+          ]
+        }
+      ]
+    },
+    "Door:default": {
+      "hidden": [
+        "material"
+      ],
+      "valuelists": {
+        "doorCondition": "Building-condition-kgr",
+        "doorDamages": "damages-kgr"
+      },
+      "fields": {
+        "allocation": {
+          "inputType": "input"
+        },
+        "doorType": {
+          "inputType": "text"
+        },
+        "doorDimensions": {
+          "inputType": "input"
+        },
+        "doorMaterial": {
+          "inputType": "input"
+        },
+        "doorDamages": {
+          "inputType": "checkboxes"
+        },
+        "doorCondition": {
+          "inputType": "dropdown"
+        },
+        "doorDescription": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "allocation",
+            "doorType",
+            "doorDimensions",
+            "doorMaterial",
+            "doorDamages",
+            "doorCondition",
+            "doorDescription"
+          ]
+        }
+      ]
+    },
+    "Damage:default": {
+      "hidden": [],
+      "valuelists": {
+        "damages-kgr-str": "damages-kgr-str",
+        "damages-kgr-mat": "damages-kgr-mat",
+        "damage-level": "level-kgr",
+        "buildingRisks": "Monument-risks-kgr",
+        "buildingPriority": "priority-kgr",
+        "monumentFirstAid": "firstAid-kgr"
+      },
+      "fields": {
+        "location": {
+          "inputType": "input"
+        },
+        "affectedAreas": {
+          "inputType": "input"
+        },
+        "damages-kgr-str": {
+          "inputType": "checkboxes"
+        },
+        "damages-kgr-mat": {
+          "inputType": "checkboxes"
+        },
+        "damage-level": {
+          "inputType": "dropdown"
+        },
+        "damage-level-notes": {
+          "inputType": "input"
+        },
+        "OtherDamages": {
+          "inputType": "text"
+        },
+        "buildingRisks": {
+          "inputType": "checkboxes"
+        },
+        "otherRisksKGR": {
+          "inputType": "input"
+        },
+        "buildingPriority": {
+          "inputType": "dropdown"
+        },
+        "monumentFirstAid": {
+          "inputType": "checkboxes"
+        },
+        "procedure": {
+          "inputType": "input"
+        },
+        "damage-notes": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "location",
+            "affectedAreas",
+            "damages-kgr-str",
+            "damages-kgr-mat",
+            "damage-level",
+            "damage-level-notes",
+            "OtherDamages",
+            "buildingRisks",
+            "otherRisksKGR",
+            "buildingPriority",
+            "monumentFirstAid",
+            "procedure",
+            "damage-notes"
+          ]
+        }
+      ]
+    },
+    "Kgr:Equipment": {
+      "parent": "BuildingPart",
+      "hidden": [],
+      "valuelists": {
+        "equipmentMaterial": "Building-material-kgr",
+        "equipmentCondition": "Building-condition-kgr",
+        "equipmentDamages": "damages-kgr"
+      },
+      "fields": {
+        "equipmentType": {
+          "inputType": "text"
+        },
+        "equipmentMaterial": {
+          "inputType": "dropdown"
+        },
+        "equipmentCondition": {
+          "inputType": "dropdown"
+        },
+        "equipmentDamages": {
+          "inputType": "dropdown"
+        },
+        "equipmentDescription": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "equipmentType",
+            "equipmentMaterial",
+            "equipmentCondition",
+            "equipmentDamages",
+            "equipmentDescription"
+          ]
+        }
+      ]
+    },
+    "Kgr:FindRecording": {
+      "parent": "Find",
+      "hidden": [],
+      "fields": {
+        "findQR": {
+          "inputType": "text"
+        },
+        "findStatus": {
+          "inputType": "text"
+        },
+        "findDamages": {
+          "inputType": "text"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "findQR",
+            "findStatus",
+            "findDamages"
+          ]
+        }
+      ]
+    },
+    "Kgr:OrganicAnimal": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {},
+      "fields": {
+        "Eierschale": {
+          "inputType": "boolean"
+        },
+        "Elfenbein": {
+          "inputType": "boolean"
+        },
+        "Feder": {
+          "inputType": "boolean"
+        },
+        "Fell": {
+          "inputType": "boolean"
+        },
+        "Geweih": {
+          "inputType": "boolean"
+        },
+        "Haar": {
+          "inputType": "boolean"
+        },
+        "Haut": {
+          "inputType": "boolean"
+        },
+        "Horn": {
+          "inputType": "boolean"
+        },
+        "KnochenBein": {
+          "inputType": "boolean"
+        },
+        "Koralle": {
+          "inputType": "boolean"
+        },
+        "Leder": {
+          "inputType": "boolean"
+        },
+        "Muschel": {
+          "inputType": "boolean"
+        },
+        "Pergament": {
+          "inputType": "boolean"
+        },
+        "Perlmutt": {
+          "inputType": "boolean"
+        },
+        "Schnecke": {
+          "inputType": "boolean"
+        },
+        "Zahn": {
+          "inputType": "boolean"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "Eierschale",
+            "Elfenbein",
+            "Feder",
+            "Fell",
+            "Geweih",
+            "Haar",
+            "Haut",
+            "Horn",
+            "KnochenBein",
+            "Koralle",
+            "Leder",
+            "Muschel",
+            "Pergament",
+            "Perlmutt",
+            "Schnecke",
+            "Zahn"
+          ]
+        }
+      ]
+    },
+    "Kgr:OrganicVegetable": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {},
+      "fields": {
+        "Bernstein": {
+          "inputType": "boolean"
+        },
+        "Holz": {
+          "inputType": "boolean"
+        },
+        "Holzkohle": {
+          "inputType": "boolean"
+        },
+        "Papier/Pappe": {
+          "inputType": "boolean"
+        },
+        "Pech": {
+          "inputType": "boolean"
+        },
+        "Rinde/Kork": {
+          "inputType": "boolean"
+        },
+        "Samen/Früchte": {
+          "inputType": "boolean"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "Bernstein",
+            "Holz",
+            "Holzkohle",
+            "Papier/Pappe",
+            "Pech",
+            "Rinde/Kork",
+            "Samen/Früchte"
+          ]
+        }
+      ]
+    },
+    "Kgr:OrganicHuman": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {},
+      "fields": {}
+    },
+    "Kgr:OrganicSynthetic": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {},
+      "fields": {
+        "Gummi oder elastisch": {
+          "inputType": "boolean"
+        },
+        "Hartkunststoff oder plastisch": {
+          "inputType": "boolean"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "Gummi oder elastisch",
+            "Hartkunststoff oder plastisch"
+          ]
+        }
+      ]
+    },
+    "Kgr:AnorganicMineral": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {
+        "Glas": "colors-default-1"
+      },
+      "fields": {
+        "Beton": {
+          "inputType": "boolean"
+        },
+        "Biolith": {
+          "inputType": "boolean"
+        },
+        "Bodenprobe": {
+          "inputType": "boolean"
+        },
+        "Email": {
+          "inputType": "boolean"
+        },
+        "Glas": {
+          "inputType": "radio"
+        },
+        "Keramik": {
+          "inputType": "boolean"
+        },
+        "Putz/Mörtel": {
+          "inputType": "boolean"
+        },
+        "Schlacke": {
+          "inputType": "boolean"
+        },
+        "Silex": {
+          "inputType": "boolean"
+        },
+        "Stein/Mineral": {
+          "inputType": "boolean"
+        },
+        "Ton/Lehm": {
+          "inputType": "boolean"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "Beton",
+            "Biolith",
+            "Bodenprobe",
+            "Email",
+            "Glas",
+            "Keramik",
+            "Putz/Mörtel",
+            "Schlacke",
+            "Silex",
+            "Stein/Mineral",
+            "Ton/Lehm"
+          ]
+        }
+      ]
+    },
+    "Kgr:AnorganicMetal": {
+      "parent": "Find",
+      "hidden": [],
+      "valuelists": {},
+      "fields": {
+        "Aluminium": {
+          "inputType": "boolean"
+        },
+        "Blei": {
+          "inputType": "boolean"
+        },
+        "Eisen": {
+          "inputType": "boolean"
+        },
+        "Gold": {
+          "inputType": "boolean"
+        },
+        "Kupfer": {
+          "inputType": "boolean"
+        },
+        "Kupferlegierung": {
+          "inputType": "boolean"
+        },
+        "Silber": {
+          "inputType": "boolean"
+        },
+        "Zinn": {
+          "inputType": "boolean"
+        },
+        "Zink": {
+          "inputType": "boolean"
+        }
+      },
+      "groups": [
+        {
+          "name": "kgrFields",
+          "fields": [
+            "Aluminium",
+            "Blei",
+            "Eisen",
+            "Gold",
+            "Kupfer",
+            "Kupferlegierung",
+            "Silber",
+            "Zinn",
+            "Zink"
+          ]
+        }
+      ]
+    }
+  },
+  "order": [
+    "Project",
+    "Operation",
+    "Trench",
+    "Building",
+    "Survey",
+    "Place",
+    "Feature",
+    "Layer",
+    "Grave",
+    "Architecture",
+    "Floor",
+    "Area",
+    "SurveyUnit",
+    "Excavation",
+    "Find",
+    "Kgr:FindRecording",
+    "Kgr:OrganicAnimal",
+    "Kgr:OrganicVegetable",
+    "Kgr:OrganicHuman",
+    "Kgr:OrganicSynthetic",
+    "Kgr:AnorganicMineral",
+    "Kgr:AnorganicMetal",
+    "Inscription",
+    "Sample",
+    "BuildingPart",
+    "OuterWall",
+    "Roof",
+    "InnerWall",
+    "RoomFloor",
+    "RoomCeiling",
+    "Stairs",
+    "Window",
+    "Door",
+    "Damage",
+    "Kgr:Equipment",
+    "Room",
+    "RoomCeiling",
+    "RoomWall",
+    "RoomFloor",
+    "Image",
+    "Drawing",
+    "Photo",
+    "TypeCatalog",
+    "Type"
+  ],
+  "valuelists": {},
+  "languages": {
+    "de": {
+      "categories": {
+        "BuildingPart": {
+          "label": "Stockwerk (Bauwerksteil)",
+          "fields": {
+            "level": {
+              "label": "Stockwerk"
+            }
+          }
+        },
+        "Building": {
+          "label": "Bauwerk",
+          "fields": {
+            "buildingAddress": {
+              "label": "Lage_Adresse"
+            },
+            "buildingCity": {
+              "label": "Lage_Stadt/Stadtteil/Bezirk"
+            },
+            "buildingState": {
+              "label": "Lage_Staat/Region"
+            },
+            "buildingDescriptionKGR": {
+              "label": "Bauwerk_Kurzbeschreibung"
+            },
+            "buildingTypeKGR": {
+              "label": "Bauwerk_Typ"
+            },
+            "buildingTypeKGR-other": {
+              "label": "Bauwerk_Typ (Sonstige)"
+            },
+            "buildingCategoryKGR": {
+              "label": "Bauwerk_Funktion"
+            },
+            "buildingCategoryKGR-other": {
+              "label": "Bauwerk_Funktion (Sonstige)"
+            },
+            "buildingMaterialKGR": {
+              "label": "Bauwerk_Material"
+            },
+            "buildingMaterialKGR-other": {
+              "label": "Bauwerk_Material (Sonstige)"
+            },
+            "buildingTechniqueKGR": {
+              "label": "Bauwerk_Technik"
+            },
+            "buildingTechniqueKGR-other": {
+              "label": "Bauwerk_Technik (Sonstige)"
+            },
+            "buildingConstructionKGR": {
+              "label": "Bauwerk_Konstruktionselemente"
+            },
+            "buildingConstructionKGR-other": {
+              "label": "Bauwerk_Konstruktionselemente (Sonstige)"
+            },
+            "buildingStoreys": {
+              "label": "Bauwerk_Stockwerkzahl"
+            },
+            "monumentSignificance": {
+              "label": "Bauwerk_Significance",
+              "description": "Falls unbekannt nicht ausfüllen! Beispiele (aus SHAP): A_Änderungen in vorhandener Bausubstanz nicht gestattet / B_Änderungen an der bestehenden Bausubstanz sind zulässig (begrenzt) / C_Änderungen an der Grundfläche des Raumes sowie an der bestehenden Bausubstanz und Innenausstattung sind zulässig / D_Änderungen der bestehenden Struktur, des Grundrisses sowie der architektonischen Elemente sind zulässig"
+            },
+            "buildingNotes": {
+              "label": "Bauwerk_Sonstiges"
+            },
+            "monumentAccessibility": {
+              "label": "Bauwerk_Begehbarkeit",
+              "description": "Begehbar? z.T. begehbar? nicht begehbar?"
+            },
+            "buildingDamage-str": {
+              "label": "Schadenserfassung_Strukturelle Schäden"
+            },
+            "buildingDamage-mat": {
+              "label": "Schadenserfassung_Materielle Schäden"
+            },
+            "buildingRisks": {
+              "label": "Schadenserfassung_Risiken"
+            },
+            "buildingRisks-other": {
+              "label": "Schadenserfassung_Risiken (Sonstige)"
+            },
+            "monumentRisks": {
+              "label": "Schadenserfassung_Gefahren"
+            },
+            "monumentRisks-other": {
+              "label": "Schadenserfassung_Gefahren (Sonstige)"
+            },
+            "buildingCondition": {
+              "label": "Schadenserfassung_Allgemeinzustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "otherRisksKGR": {
+              "label": "Schadenserfassung (Sonstige)"
+            },
+            "buildingPriority": {
+              "label": "Schadensbewertung_Priorisierung"
+            },
+            "monumentFirstAid": {
+              "label": "Schadensbewertung_Erste Hilfe"
+            },
+            "furtherProcedure": {
+              "label": "Schadensbewertung_Weitere Prozedur"
+            },
+            "buildingArchitect": {
+              "label": "Info_Architekt"
+            },
+            "buildingMonumentStatus": {
+              "label": "Info_Denkmalstatus"
+            },
+            "monumentOccupation": {
+              "label": "Info_Bewohnt/Unbewohnt"
+            },
+            "buildingOwner": {
+              "label": "Info_Besitzer"
+            },
+            "monumentAdministration": {
+              "label": "Info_Zuständige Behörde"
+            }
+          }
+        },
+        "OuterWall": {
+          "label": "Außenwand",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Falls bekannt, mit welchem Raum / welcher Räume sie in Relation steht. Signatur eintragen!"
+            },
+            "wallOutsideOrientation": {
+              "label": "Ausrichtung",
+              "description": "Himmelsrichtung eingeben!"
+            },
+            "wallOutsideMaterial": {
+              "label": "Material"
+            },
+            "wallOutsideMaterial-other": {
+              "label": "Material (Sonstige)"
+            },
+            "wallOutsideTechnique": {
+              "label": "Bautechnik"
+            },
+            "wallOutsideTechnique-other": {
+              "label": "Bautechnik (Sonstige)"
+            },
+            "wallOutsideConstruction": {
+              "label": "Konstruktionselemente"
+            },
+            "wallOutsideConstruction-other": {
+              "label": "Konstruktionselemente (Sonstige)"
+            },
+            "wallOutsideDamages": {
+              "label": "Schäden"
+            },
+            "wallOutsideDamages-other": {
+              "label": "Schäden (Sonstige)"
+            },
+            "wallOutsideCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "wallOutsideNotes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Roof": {
+          "label": "Dach",
+          "fields": {
+            "roofOutsideType": {
+              "label": "Dachart"
+            },
+            "roofConstruction": {
+              "label": "Dachkonstruktion"
+            },
+            "roofConstructionMaterial": {
+              "label": "Konstruktionsmaterial"
+            },
+            "roofOutsideMaterial": {
+              "label": "Deckungsmaterial"
+            },
+            "roofOutsideMaterial-other": {
+              "label": "Deckungsmaterial (Sonstige)"
+            },
+            "roofOutsideDamages": {
+              "label": "Schäden"
+            },
+            "roofOutsideDamages-other": {
+              "label": "Schäden (Sonstige)"
+            },
+            "roofOutsideCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "roofOutsideNotes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "InnerWall": {
+          "label": "Innenwand",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "wallInsideOrientation": {
+              "label": "Ausrichtung",
+              "description": "Himmelsrichtung eingeben!"
+            },
+            "wallInsideDimensions": {
+              "label": "Maße"
+            },
+            "wallInsideMaterial": {
+              "label": "Material"
+            },
+            "wallInsideMaterial-other": {
+              "label": "Material (Sonstige)"
+            },
+            "wallInsideTechnique": {
+              "label": "Bautechnik"
+            },
+            "wallInsideTechnique-other": {
+              "label": "Bautechnik (Sonstige)"
+            },
+            "wallInsideConstruction": {
+              "label": "Konstruktionselemente"
+            },
+            "wallInsideConstruction-other": {
+              "label": "Konstruktionselemente (Sonstige)"
+            },
+            "wallInsideDamages": {
+              "label": "Schäden"
+            },
+            "wallInsideDamages-other": {
+              "label": "Schäden (Sonstige)"
+            },
+            "wallInsideCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "WallInsideNotes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "RoomFloor": {
+          "label": "Boden",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "floorlevel": {
+              "label": "Niveau"
+            },
+            "floorDimensions": {
+              "label": "Maße"
+            },
+            "floorMaterial": {
+              "label": "Material"
+            },
+            "floorMaterial-other": {
+              "label": "Material (Sonstige)"
+            },
+            "floorTechnique": {
+              "label": "Bautechnik"
+            },
+            "floorTechnique-other": {
+              "label": "Bautechnik (Sonstige)"
+            },
+            "floorDamages": {
+              "label": "Schäden"
+            },
+            "floorDamages-other": {
+              "label": "Schäden (Sonstige)"
+            },
+            "floorCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "floorNotes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "RoomCeiling": {
+          "label": "Decke",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "ceilinglevel": {
+              "label": "Niveau"
+            },
+            "ceilingDimensions": {
+              "label": "Maße"
+            },
+            "ceilingMaterial": {
+              "label": "Material"
+            },
+            "ceilingMaterial-other": {
+              "label": "Material (Sonstige)"
+            },
+            "ceilingTechnique": {
+              "label": "Bautechnik"
+            },
+            "ceilingTechnique-other": {
+              "label": "Bautechnik (Sonstige)"
+            },
+            "ceilingConstruction": {
+              "label": "Konstruktionselemente"
+            },
+            "ceilingConstruction-other": {
+              "label": "Konstruktionselemente (Sonstige)"
+            },
+            "ceilingDamages": {
+              "label": "Schäden"
+            },
+            "ceilingDamages-other": {
+              "label": "Schäden (Sonstige)"
+            },
+            "ceilingCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "ceilingNotes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Stairs": {
+          "label": "Treppe",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "stairsForm": {
+              "label": "Form"
+            },
+            "stairslevel": {
+              "label": "Niveau von - bis"
+            },
+            "stairsDimensions": {
+              "label": "Maße"
+            },
+            "stairsMaterial": {
+              "label": "Material"
+            },
+            "stairsTechnique": {
+              "label": "Bautechnik"
+            },
+            "stairsCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "stairsDamages": {
+              "label": "Schaden"
+            },
+            "stairsDescription": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Window": {
+          "label": "Fenster",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "windowType": {
+              "label": "Fenster-Art"
+            },
+            "windowDimensions": {
+              "label": "Maße"
+            },
+            "windowMaterial": {
+              "label": "Material"
+            },
+            "windowCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "windowDamages": {
+              "label": "Schäden"
+            },
+            "windowDescription": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Door": {
+          "label": "Tür",
+          "fields": {
+            "allocation": {
+              "label": "Zuordnung",
+              "description": "Raumsignatur eintragen!"
+            },
+            "doorType": {
+              "label": "Tür-Art"
+            },
+            "doorDimensions": {
+              "label": "Maße"
+            },
+            "doorMaterial": {
+              "label": "Material"
+            },
+            "doorCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "doorDamages": {
+              "label": "Schäden"
+            },
+            "doorDescription": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Damage": {
+          "label": "Schaden",
+          "fields": {
+            "affectedAreas": {
+              "label": "Schadenserfassung_Betroffenes Bau- / Konstruktionselement",
+              "description": "Signatur der Räume bzw. der Elemente eintragen!"
+            },
+            "location": {
+              "label": "Schadenserfassung_Lage"
+            },
+            "damages-kgr-str": {
+              "label": "Schadenserfassung_Strukturelle Schäden"
+            },
+            "damages-kgr-mat": {
+              "label": "Schadenserfassung_Materielle Schäden"
+            },
+            "OtherDamages": {
+              "label": "Schadenserfassung_Sonstige Schäden"
+            },
+            "damage-level": {
+              "label": "Schadenserfassung_Schadensgrad"
+            },
+            "damage-level-notes": {
+              "label": "Schadenserfassung_Notizen zu Schadensgrad"
+            },
+            "buildingRisks": {
+              "label": "Schadenserfassung_Risiken"
+            },
+            "otherRisksKGR": {
+              "label": "Schadenserfassung_Risiken (Sonstige)"
+            },
+            "buildingPriority": {
+              "label": "Schadensbewertung_Priorisierung"
+            },
+            "monumentFirstAid": {
+              "label": "Schadensbewertung_Erste Hilfe"
+            },
+            "procedure": {
+              "label": "Schadensbewertung_Weitere Prozedur"
+            },
+            "damage-notes": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Kgr:Equipment": {
+          "label": "Ausstattung",
+          "fields": {
+            "equipmentType": {
+              "label": "Ausstattung - Typ"
+            },
+            "equipmentMaterial": {
+              "label": "Material"
+            },
+            "equipmentCondition": {
+              "label": "Zustand",
+              "description": "Beispiele zu Zustandsklassen (aus EN 16096): CC1_Oberflächliche und keine wesentliche Veränderungen / CC2_Örtlich begrenzte Beschädigung - Oberflächenbeschädigung / CC3_Schwerwiegende Schäden, mehrere bedeutsame Verluste"
+            },
+            "equipmentDamages": {
+              "label": "Schäden"
+            },
+            "equipmentDescription": {
+              "label": "Anmerkungen"
+            }
+          }
+        },
+        "Kgr:FindRecording": {
+          "label": "Fundaufnahme",
+          "fields": {
+            "findQR": {
+              "label": "ID / QR"
+            },
+            "findStatus": {
+              "label": "Status"
+            },
+            "findDamages": {
+              "label": "Schäden"
+            }
+          }
+        },
+        "Kgr:OrganicAnimal": {
+          "label": "Organisch-Tierisch",
+          "fields": {
+            "Eierschale": {
+              "label": "Eierschale"
+            },
+            "Elfenbein": {
+              "label": "Elfenbein"
+            },
+            "Feder": {
+              "label": "Feder"
+            },
+            "Fell": {
+              "label": "Fell"
+            },
+            "Geweih": {
+              "label": "Geweih"
+            },
+            "Haar": {
+              "label": "Haar"
+            },
+            "Haut": {
+              "label": "Haut"
+            },
+            "Horn": {
+              "label": "Horn"
+            },
+            "KnochenBein": {
+              "label": "Knochen / Bein"
+            },
+            "Koralle": {
+              "label": "Koralle"
+            },
+            "Leder": {
+              "label": "Leder"
+            },
+            "Muschel": {
+              "label": "Muschel"
+            },
+            "Pergament": {
+              "label": "Pergament"
+            },
+            "Perlmutt": {
+              "label": "Perlmutt"
+            },
+            "Schnecke": {
+              "label": "Schnecke"
+            },
+            "Zahn": {
+              "label": "Zahn"
+            }
+          }
+        },
+        "Kgr:OrganicVegetable": {
+          "label": "Organisch-Pflanzlich",
+          "fields": {
+            "Bernstein": {
+              "label": "Bernstein"
+            },
+            "Holz": {
+              "label": "Holz"
+            },
+            "Holzkohle": {
+              "label": "Holzkohle"
+            },
+            "Papier/Pappe": {
+              "label": "Papier / Pappe"
+            },
+            "Pech": {
+              "label": "Pech"
+            },
+            "Rinde/Kork": {
+              "label": "Rinde/Kork"
+            },
+            "Samen/Früchte": {
+              "label": "Samen /Früchte"
+            }
+          }
+        },
+        "Kgr:OrganicHuman": {
+          "label": "Organisch-Menschlich",
+          "fields": {}
+        },
+        "Kgr:OrganicSynthetic": {
+          "label": "Organisch-Kunststoff",
+          "fields": {
+            "Gummi oder elastisch": {
+              "label": "Gummi oder elastisch"
+            },
+            "Hartkunststoff oder plastisch": {
+              "label": "Hartkunstoff oder plastisch"
+            }
+          }
+        },
+        "Kgr:AnorganicMineral": {
+          "label": "Anorganisch-Mineralisch",
+          "fields": {
+            "Beton": {
+              "label": "Beton"
+            },
+            "Biolith": {
+              "label": "Biolith"
+            },
+            "Bodenprobe": {
+              "label": "Bodenprobe"
+            },
+            "Email": {
+              "label": "Email"
+            },
+            "Glas": {
+              "label": "Glas"
+            },
+            "Keramik": {
+              "label": "Keramik"
+            },
+            "Putz/Mörtel": {
+              "label": "Putz / Mörtel"
+            },
+            "Schlacke": {
+              "label": "Schlacke"
+            },
+            "Silex": {
+              "label": "Silex"
+            },
+            "Stein/Mineral": {
+              "label": "Stein / Mineral"
+            },
+            "Ton/Lehm": {
+              "label": "Ton / Lehm"
+            }
+          }
+        },
+        "Kgr:AnorganicMetal": {
+          "label": "Anorganisch-Metal",
+          "fields": {
+            "Aluminium": {
+              "label": "Aluminium"
+            },
+            "Blei": {
+              "label": "Blei"
+            },
+            "Eisen": {
+              "label": "Eisen"
+            },
+            "Gold": {
+              "label": "Gold"
+            },
+            "Kupfer": {
+              "label": "Kupfer"
+            },
+            "Kupferlegierung": {
+              "label": "Kupferlegierung"
+            },
+            "Silber": {
+              "label": "Silber"
+            },
+            "Zinn": {
+              "label": "Zinn"
+            },
+            "Zink": {
+              "label": "Zink"
+            }
+          }
+        }
+      }
+    }
+  }
+}
