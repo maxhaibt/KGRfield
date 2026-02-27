@@ -1,0 +1,20 @@
+{
+  "postgresql": {
+    "url": "xxx",
+    "schema": "kgr_2024_dai",
+    "listen_schema": "listen"
+  },
+  "idaifield": {
+    "url": "http://localhost:3001",
+    "database": "kgr_test8",
+    "username": "",
+    "password": ""
+  },
+  "improved_config_path": "output/kgr_improved_config.json",
+  "prefix": "kgr_chru_datamodel",
+  "dry_run": false,
+  "place_identifier": "Einsatzort",
+  "orphan_survey_identifier": "Unzugeordnet",
+  "date_default_time": "00:00",
+  "date_timezone_offset": "+01:00"
+}

@@ -1,0 +1,5712 @@
+{
+  "_id": "configuration",
+  "resource": {
+    "forms": {
+      "Profile:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Planum:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Project:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Operation:default": {
+        "hidden": [
+          "spatialLocation"
+        ],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Survey:default": {
+        "hidden": [],
+        "fields": {
+          "kgr_chru_datamodel:date": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:processor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:name": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:address": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:city": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:region": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:country": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:operationalAreaId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:hazardEvent": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:hazardEventOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:grossOp": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:siteName": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:monumentsAmount": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:monumentsCategory": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:monumentCategoryOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:siteContext": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:areaUtilization": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:areaUtilizationOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:useBeforeEvent": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:historicUse": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:consructionYearKnownPeriod": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionYearUnknownPeriod": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:siteDescription": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:protectionLevel": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:protectionLevelOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:authority": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:heritageInventoryNumber": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:intangibleHeritage": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:intangibleHeritageNote": {
+            "inputType": "input",
+            "constraintIndexed": false
+          }
+        },
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "supervisor",
+              "processor",
+              "campaign",
+              "date"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "diaryAbstract",
+              "researchMethod"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "area"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "kgr_chru_datamodel:name",
+              "kgr_chru_datamodel:address",
+              "kgr_chru_datamodel:city",
+              "kgr_chru_datamodel:region",
+              "kgr_chru_datamodel:country",
+              "kgr_chru_datamodel:operationalAreaId"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:chruEditing",
+            "fields": [
+              "kgr_chru_datamodel:date",
+              "kgr_chru_datamodel:processor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": []
+          },
+          {
+            "name": "kgr_chru_datamodel:hazardEvent",
+            "fields": [
+              "kgr_chru_datamodel:hazardEvent",
+              "kgr_chru_datamodel:hazardEventOther",
+              "kgr_chru_datamodel:grossOp"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:site",
+            "fields": [
+              "kgr_chru_datamodel:siteName",
+              "kgr_chru_datamodel:siteDescription"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:numberOfMonuments",
+            "fields": [
+              "kgr_chru_datamodel:monumentsAmount",
+              "kgr_chru_datamodel:monumentsCategory",
+              "kgr_chru_datamodel:monumentCategoryOther",
+              "kgr_chru_datamodel:siteContext",
+              "kgr_chru_datamodel:areaUtilization",
+              "kgr_chru_datamodel:areaUtilizationOther",
+              "kgr_chru_datamodel:useBeforeEvent",
+              "kgr_chru_datamodel:historicUse"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:periodOfConstruction",
+            "fields": [
+              "kgr_chru_datamodel:consructionYearKnownPeriod"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:estimatedTimeOfConstruction",
+            "fields": [
+              "kgr_chru_datamodel:constructionYearUnknownPeriod"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:culturalHeritageInformation",
+            "fields": [
+              "kgr_chru_datamodel:protectionLevel",
+              "kgr_chru_datamodel:protectionLevelOther",
+              "kgr_chru_datamodel:authority",
+              "kgr_chru_datamodel:heritageInventoryNumber",
+              "kgr_chru_datamodel:intangibleHeritage",
+              "kgr_chru_datamodel:intangibleHeritageNote"
+            ]
+          }
+        ],
+        "valuelists": {
+          "kgr_chru_datamodel:siteName": "kgr_chru_datamodel:SiteName",
+          "kgr_chru_datamodel:siteContext": "kgr_chru_datamodel:SiteContext",
+          "kgr_chru_datamodel:areaUtilization": "kgr_chru_datamodel:AreaUtilization",
+          "kgr_chru_datamodel:protectionLevel": "kgr_chru_datamodel:PotectionLevel",
+          "kgr_chru_datamodel:intangibleHeritage": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:hazardEvent": "kgr_chru_datamodel:hazard",
+          "kgr_chru_datamodel:monumentsCategory": "kgr_chru_datamodel:monument_category"
+        }
+      },
+      "SurveyUnit:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Place:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Area:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Building:default": {
+        "hidden": [],
+        "fields": {
+          "kgr_chru_datamodel:date": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:processor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:opAreaId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingNr": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingName": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingUse": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:historicUse": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:accessibility": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:thwStatus": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:remoteAsessment": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:outsideAssessment": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:interiorInspection": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:numberOfFloorAbove": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:knownFloorsBelow": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:numberOfFloorBelow": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingArea": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationType": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationMaterials": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationMaterialsOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationDamage": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationDamageOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationDamageExtend": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationConditionClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationRiskAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationUrgencyClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:foundationNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionType": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionMaterials": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionMaterialsOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionDamage": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionDamageOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionDamageExtend": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:consructionConditionClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionRiskAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionUrgencyClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeLoadBearing": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeMaterial": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeMaterialOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeDamage": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeDamageOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeDamageExtent": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeConditionClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeRiskAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeUrgencyClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:facadeNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofType": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofTypeOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofMaterialConstruction": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofMaterial": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofMaterialOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofDamage": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofDamageOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofDamageExtend": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofConditionClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofRiskAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofUrgencyClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roofNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:recommendationClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:uuid": {
+            "inputType": "input",
+            "constraintIndexed": false
+          }
+        },
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "supervisor",
+              "processor",
+              "campaign",
+              "date"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "diaryAbstract",
+              "material",
+              "context",
+              "condition",
+              "conditionAmount",
+              "conditionComment",
+              "hasRestoration",
+              "buildingType",
+              "buildingTechnique",
+              "buildingCategory",
+              "buildingCategorySpecific",
+              "buildingResearchHistory"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "area",
+              "dimensionLength",
+              "dimensionWidth"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:chruEditing",
+            "fields": [
+              "kgr_chru_datamodel:date",
+              "kgr_chru_datamodel:processor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingId",
+              "kgr_chru_datamodel:buildingNr",
+              "kgr_chru_datamodel:buildingName",
+              "kgr_chru_datamodel:buildingUse",
+              "kgr_chru_datamodel:historicUse"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:building",
+            "fields": [
+              "kgr_chru_datamodel:accessibility",
+              "kgr_chru_datamodel:thwStatus",
+              "kgr_chru_datamodel:remoteAsessment",
+              "kgr_chru_datamodel:outsideAssessment",
+              "kgr_chru_datamodel:interiorInspection",
+              "kgr_chru_datamodel:buildingArea",
+              "kgr_chru_datamodel:uuid"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floors",
+            "fields": [
+              "kgr_chru_datamodel:numberOfFloorAbove",
+              "kgr_chru_datamodel:knownFloorsBelow"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floorsBelow",
+            "fields": [
+              "kgr_chru_datamodel:numberOfFloorBelow"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:foundation",
+            "fields": [
+              "kgr_chru_datamodel:foundationType",
+              "kgr_chru_datamodel:foundationMaterials",
+              "kgr_chru_datamodel:foundationMaterialsOther",
+              "kgr_chru_datamodel:foundationDamage",
+              "kgr_chru_datamodel:foundationDamageOther",
+              "kgr_chru_datamodel:foundationDamageExtend",
+              "kgr_chru_datamodel:foundationConditionClass",
+              "kgr_chru_datamodel:foundationRiskAssessment",
+              "kgr_chru_datamodel:foundationUrgencyClass",
+              "kgr_chru_datamodel:foundationNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:innerSupportingConstruction",
+            "fields": [
+              "kgr_chru_datamodel:constructionType",
+              "kgr_chru_datamodel:constructionMaterials",
+              "kgr_chru_datamodel:constructionMaterialsOther",
+              "kgr_chru_datamodel:constructionDamage",
+              "kgr_chru_datamodel:constructionDamageOther",
+              "kgr_chru_datamodel:constructionDamageExtend",
+              "kgr_chru_datamodel:consructionConditionClass",
+              "kgr_chru_datamodel:constructionRiskAssessment",
+              "kgr_chru_datamodel:constructionUrgencyClass",
+              "kgr_chru_datamodel:constructionNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:outerWallsFacade",
+            "fields": [
+              "kgr_chru_datamodel:facadeLoadBearing",
+              "kgr_chru_datamodel:facadeMaterial",
+              "kgr_chru_datamodel:facadeMaterialOther",
+              "kgr_chru_datamodel:facadeDamage",
+              "kgr_chru_datamodel:facadeDamageOther",
+              "kgr_chru_datamodel:facadeDamageExtent",
+              "kgr_chru_datamodel:facadeConditionClass",
+              "kgr_chru_datamodel:facadeRiskAssessment",
+              "kgr_chru_datamodel:facadeUrgencyClass",
+              "kgr_chru_datamodel:facadeNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:roof",
+            "fields": [
+              "kgr_chru_datamodel:roofType",
+              "kgr_chru_datamodel:roofTypeOther",
+              "kgr_chru_datamodel:roofMaterialConstruction",
+              "kgr_chru_datamodel:roofMaterial",
+              "kgr_chru_datamodel:roofMaterialOther",
+              "kgr_chru_datamodel:roofDamage",
+              "kgr_chru_datamodel:roofDamageOther",
+              "kgr_chru_datamodel:roofDamageExtend",
+              "kgr_chru_datamodel:roofConditionClass",
+              "kgr_chru_datamodel:roofRiskAssessment",
+              "kgr_chru_datamodel:roofUrgencyClass",
+              "kgr_chru_datamodel:roofNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:overallAssessment",
+            "fields": [
+              "kgr_chru_datamodel:recommendationClass",
+              "kgr_chru_datamodel:buildingNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:orientationSystemAndMedia",
+            "fields": []
+          }
+        ],
+        "valuelists": {
+          "kgr_chru_datamodel:accessibility": "kgr_chru_datamodel:accessibility",
+          "kgr_chru_datamodel:thwStatus": "kgr_chru_datamodel:THWStatus",
+          "kgr_chru_datamodel:knownFloorsBelow": "kgr_chru_datamodel:floorsbelow",
+          "kgr_chru_datamodel:foundationDamageExtend": "kgr_chru_datamodel:Damageextent",
+          "kgr_chru_datamodel:foundationConditionClass": "kgr_chru_datamodel:Cconditionclass",
+          "kgr_chru_datamodel:foundationUrgencyClass": "kgr_chru_datamodel:Urgencyclass",
+          "kgr_chru_datamodel:constructionType": "kgr_chru_datamodel:Constructiontype",
+          "kgr_chru_datamodel:constructionDamageExtend": "kgr_chru_datamodel:Damageextent",
+          "kgr_chru_datamodel:consructionConditionClass": "kgr_chru_datamodel:Conditionclass",
+          "kgr_chru_datamodel:constructionUrgencyClass": "kgr_chru_datamodel:UC1longterm3yearsandmore",
+          "kgr_chru_datamodel:facadeLoadBearing": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:facadeDamageExtent": "kgr_chru_datamodel:Damageextent",
+          "kgr_chru_datamodel:facadeConditionClass": "Building-condition-kgr",
+          "kgr_chru_datamodel:facadeUrgencyClass": "kgr_chru_datamodel:UC1longterm3yearsandmore",
+          "kgr_chru_datamodel:roofDamageExtend": "kgr_chru_datamodel:Damageextent",
+          "kgr_chru_datamodel:roofConditionClass": "Building-condition-kgr",
+          "kgr_chru_datamodel:roofUrgencyClass": "kgr_chru_datamodel:Urgencyclass",
+          "kgr_chru_datamodel:recommendationClass": "kgr_chru_datamodel:Recommendationclass",
+          "kgr_chru_datamodel:foundationType": "kgr_chru_datamodel:foundation",
+          "kgr_chru_datamodel:foundationMaterials": "kgr_chru_datamodel:foundation_materials",
+          "kgr_chru_datamodel:foundationRiskAssessment": "kgr_chru_datamodel:risk_assessment",
+          "kgr_chru_datamodel:constructionMaterials": "kgr_chru_datamodel:construction_materials",
+          "kgr_chru_datamodel:constructionRiskAssessment": "kgr_chru_datamodel:risk_assessment",
+          "kgr_chru_datamodel:facadeMaterial": "kgr_chru_datamodel:material_facade",
+          "kgr_chru_datamodel:facadeRiskAssessment": "kgr_chru_datamodel:risk_assessment",
+          "kgr_chru_datamodel:roofType": "kgr_chru_datamodel:type_roof",
+          "kgr_chru_datamodel:roofMaterialConstruction": "kgr_chru_datamodel:roof_construction",
+          "kgr_chru_datamodel:roofMaterial": "kgr_chru_datamodel:material_roofing",
+          "kgr_chru_datamodel:roofRiskAssessment": "kgr_chru_datamodel:risk_assessment"
+        }
+      },
+      "BuildingPart:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Find:default": {
+        "hidden": [],
+        "fields": {
+          "kgr_chru_datamodel:opAreaId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingName": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:floorNummer": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:movDate": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:movProcessor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:findingId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:objectName": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:objectType": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:qrCode": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:qrCodeCluster": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:qrCodeCluster2Cluster": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:room": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regRiskAssessmentCondition": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regConditionComplete": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:evacStay": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regSalvageTransport": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:notes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regDate": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:regProcessor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regContamination": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regContaminationNote": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regCleaning": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regPhotoDocu": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regPriority": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regAcquisitionCompleted": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:regNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clNewCode": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clDate": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:clProcessor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clType": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clWet": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clDry": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clStatus": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryNewCode": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryProcessor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryDepot": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryDate": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:dryTechnique": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryHumidity": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryTemperature": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryStartTime": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryStatus": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryDepotStatus": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:dryNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          }
+        },
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:mediaFindings",
+            "fields": []
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {
+          "kgr_chru_datamodel:floorNummer": "kgr_chru_datamodel:floor-nr",
+          "kgr_chru_datamodel:objectType": "kgr_chru_datamodel:object-type",
+          "kgr_chru_datamodel:regRiskAssessmentCondition": "kgr_chru_datamodel:condition",
+          "kgr_chru_datamodel:regConditionComplete": "kgr_chru_datamodel:condition2",
+          "kgr_chru_datamodel:evacStay": "kgr_chru_datamodel:evacuation",
+          "kgr_chru_datamodel:regContamination": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:regCleaning": "kgr_chru_datamodel:cleaning",
+          "kgr_chru_datamodel:regPhotoDocu": "kgr_chru_datamodel:photodocu",
+          "kgr_chru_datamodel:regPriority": "kgr_chru_datamodel:low",
+          "kgr_chru_datamodel:regAcquisitionCompleted": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:clNewCode": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:clType": "kgr_chru_datamodel:cleaning-type",
+          "kgr_chru_datamodel:clWet": "kgr_chru_datamodel:wet-cleaning",
+          "kgr_chru_datamodel:clDry": "kgr_chru_datamodel:dry-cleaning",
+          "kgr_chru_datamodel:clStatus": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:dryNewCode": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:dryTechnique": "kgr_chru_datamodel:dry-technique",
+          "kgr_chru_datamodel:dryStatus": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:dryDepotStatus": "kgr_chru_datamodel:Yes"
+        },
+        "scanCodes": {
+          "type": "qr",
+          "autoCreate": false,
+          "printedFields": []
+        }
+      },
+      "FindCollection:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Feature:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "FeatureGroup:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "FeatureSegment:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Level:default": {
+        "hidden": [],
+        "fields": {
+          "kgr_chru_datamodel:date": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:processor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:buildingId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:floorNr": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roomNr": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roomDesignation": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:accessibility": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roomArea": {
+            "inputType": "int",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:damage": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:damageNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:rubble": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:rubbleNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:decorative": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:decorativeNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:movableHeritage": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:movableHeritageNotes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:priority": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:basisDocumentation": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:heritageAssessment": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:mHeritageAcquisition": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:notesDec": {
+            "inputType": "input",
+            "constraintIndexed": false
+          }
+        },
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "material"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "area",
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:chruEditing",
+            "fields": [
+              "kgr_chru_datamodel:date",
+              "kgr_chru_datamodel:processor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:buildingId",
+              "kgr_chru_datamodel:floorNr",
+              "kgr_chru_datamodel:roomNr",
+              "kgr_chru_datamodel:roomDesignation"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:room",
+            "fields": [
+              "kgr_chru_datamodel:accessibility",
+              "kgr_chru_datamodel:roomArea",
+              "kgr_chru_datamodel:damage",
+              "kgr_chru_datamodel:damageNotes",
+              "kgr_chru_datamodel:rubble",
+              "kgr_chru_datamodel:rubbleNotes",
+              "kgr_chru_datamodel:decorative",
+              "kgr_chru_datamodel:decorativeNotes",
+              "kgr_chru_datamodel:movableHeritage",
+              "kgr_chru_datamodel:movableHeritageNotes",
+              "kgr_chru_datamodel:priority",
+              "kgr_chru_datamodel:basisDocumentation",
+              "kgr_chru_datamodel:heritageAssessment",
+              "kgr_chru_datamodel:mHeritageAcquisition",
+              "kgr_chru_datamodel:notesDec"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:media",
+            "fields": []
+          }
+        ],
+        "valuelists": {
+          "kgr_chru_datamodel:accessibility": "kgr_chru_datamodel:Inaccessible",
+          "kgr_chru_datamodel:damage": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:rubble": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:decorative": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:movableHeritage": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:priority": "kgr_chru_datamodel:low",
+          "kgr_chru_datamodel:basisDocumentation": "kgr_chru_datamodel:complete",
+          "kgr_chru_datamodel:heritageAssessment": "kgr_chru_datamodel:complete",
+          "kgr_chru_datamodel:mHeritageAcquisition": "kgr_chru_datamodel:complete"
+        }
+      },
+      "Room:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "RoomCeiling:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "RoomFloor:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "RoomWall:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "InnerWall:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "OuterWall:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Roof:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Opening:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Door:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Window:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Stairs:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Damage:default": {
+        "hidden": [],
+        "fields": {
+          "kgr_chru_datamodel:processor": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:date": {
+            "inputType": "input"
+          },
+          "kgr_chru_datamodel:operationalAreaId": {
+            "inputType": "multiInput"
+          },
+          "kgr_chru_datamodel:buildingId": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:floorNummer": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:roomNr": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:damage": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionalElementPrimary": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionalElementSecondary": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:constructionalElementSecondaryOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:loadBearingComponent": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:damageType": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:other": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:conditionClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:riskAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:urgencyClass": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:documentationAssessment": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:documentationAssessmentOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:furtherInvestigation": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:furtherInvestigationOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clearingCleaning": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:clearingCleaningOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:stabilization": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:stabilizationOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:protection": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:protectionOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:salvageDismantling": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:salvageDismantlingOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:emergencyConservation": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:emergencyConservationOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:evacuationStoring": {
+            "inputType": "checkboxes",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:evacuationStoringOther": {
+            "inputType": "input",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:priority": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:measuresCompleted": {
+            "inputType": "dropdown",
+            "constraintIndexed": false
+          },
+          "kgr_chru_datamodel:notes": {
+            "inputType": "input",
+            "constraintIndexed": false
+          }
+        },
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "diary"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "condition",
+              "damageType"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "area",
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:chruEditing",
+            "fields": [
+              "kgr_chru_datamodel:processor",
+              "kgr_chru_datamodel:date"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:operationalAreaId",
+              "kgr_chru_datamodel:buildingId",
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:roomNr"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:assessment",
+            "fields": [
+              "kgr_chru_datamodel:damage",
+              "kgr_chru_datamodel:constructionalElementPrimary",
+              "kgr_chru_datamodel:constructionalElementSecondary",
+              "kgr_chru_datamodel:constructionalElementSecondaryOther",
+              "kgr_chru_datamodel:loadBearingComponent",
+              "kgr_chru_datamodel:damageType",
+              "kgr_chru_datamodel:other",
+              "kgr_chru_datamodel:conditionClass",
+              "kgr_chru_datamodel:riskAssessment",
+              "kgr_chru_datamodel:urgencyClass"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:furtherMeasuresOnSite",
+            "fields": [
+              "kgr_chru_datamodel:documentationAssessment",
+              "kgr_chru_datamodel:documentationAssessmentOther",
+              "kgr_chru_datamodel:furtherInvestigation",
+              "kgr_chru_datamodel:furtherInvestigationOther",
+              "kgr_chru_datamodel:clearingCleaning",
+              "kgr_chru_datamodel:clearingCleaningOther",
+              "kgr_chru_datamodel:stabilization",
+              "kgr_chru_datamodel:stabilizationOther",
+              "kgr_chru_datamodel:protection",
+              "kgr_chru_datamodel:protectionOther",
+              "kgr_chru_datamodel:salvageDismantling",
+              "kgr_chru_datamodel:salvageDismantlingOther",
+              "kgr_chru_datamodel:emergencyConservation",
+              "kgr_chru_datamodel:emergencyConservationOther",
+              "kgr_chru_datamodel:evacuationStoring",
+              "kgr_chru_datamodel:evacuationStoringOther",
+              "kgr_chru_datamodel:priority",
+              "kgr_chru_datamodel:measuresCompleted",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:media",
+            "fields": []
+          }
+        ],
+        "valuelists": {
+          "kgr_chru_datamodel:damage": "kgr_chru_datamodel:SingleDamage",
+          "kgr_chru_datamodel:loadBearingComponent": "kgr_chru_datamodel:Yes",
+          "kgr_chru_datamodel:conditionClass": "kgr_chru_datamodel:CC0",
+          "kgr_chru_datamodel:urgencyClass": "kgr_chru_datamodel:UC1longterm3yearsandmore",
+          "kgr_chru_datamodel:priority": "kgr_chru_datamodel:low",
+          "kgr_chru_datamodel:measuresCompleted": "kgr_chru_datamodel:yes",
+          "kgr_chru_datamodel:constructionalElementPrimary": "kgr_chru_datamodel:component_primary",
+          "kgr_chru_datamodel:constructionalElementSecondary": "kgr_chru_datamodel:component_secondary",
+          "kgr_chru_datamodel:damageType": "kgr_chru_datamodel:damage",
+          "kgr_chru_datamodel:riskAssessment": "kgr_chru_datamodel:risk_assessment",
+          "kgr_chru_datamodel:documentationAssessment": "kgr_chru_datamodel:documentation_assessment",
+          "kgr_chru_datamodel:furtherInvestigation": "kgr_chru_datamodel:investigation",
+          "kgr_chru_datamodel:clearingCleaning": "kgr_chru_datamodel:clearing_cleaning",
+          "kgr_chru_datamodel:stabilization": "kgr_chru_datamodel:stabilization",
+          "kgr_chru_datamodel:protection": "kgr_chru_datamodel:protection",
+          "kgr_chru_datamodel:salvageDismantling": "kgr_chru_datamodel:salvage",
+          "kgr_chru_datamodel:emergencyConservation": "kgr_chru_datamodel:emergency",
+          "kgr_chru_datamodel:evacuationStoring": "kgr_chru_datamodel:evacuation"
+        }
+      },
+      "DesignElement:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Inscription:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Image:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Glass:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "formDescription",
+              "color",
+              "transparency",
+              "decorationTechnique",
+              "decorationDescription",
+              "manufacturingMethod",
+              "objectType",
+              "vesselForm",
+              "vesselFormSpecific",
+              "provenance"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Mollusk:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "classification"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Brick:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "temper",
+              "manufacturing",
+              "manufacturingMethod",
+              "brickForm",
+              "brickUsage",
+              "formDescription",
+              "clayColorOutside",
+              "decorationTechnique",
+              "featureText",
+              "coatColorOutside",
+              "coatColorInside",
+              "specificType",
+              "provenance"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Burial:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Wood:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "color",
+              "typeOfWood",
+              "objectType",
+              "manufacturingMethod",
+              "provenance",
+              "colorOutside",
+              "colorOutsideMunsell",
+              "colorInside",
+              "colorInsideMunsell",
+              "colorBreak",
+              "colorBreakMunsell",
+              "surfaceCondition",
+              "decorationTechnique",
+              "paintColor",
+              "paintColorMunsell",
+              "paintCondition"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Architecture:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Layer:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Floor:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Pottery:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "materialType",
+              "specificType",
+              "vesselForm",
+              "vesselFormSpecific",
+              "typeNumber",
+              "manufacturing",
+              "manufacturingMethod",
+              "temper",
+              "temperAmount",
+              "temperParticles",
+              "temperTypeClay",
+              "clayHardness",
+              "clayColorOutside",
+              "clayColorOutsideMunsell",
+              "clayColorInside",
+              "clayColorInsideMunsell",
+              "clayColorBreak",
+              "clayColorBreakMunsell",
+              "breakStructure",
+              "coatInside",
+              "coatColorInside",
+              "coatInsideType",
+              "coatOutside",
+              "coatColorOutside",
+              "coatOutsideType",
+              "formDescription",
+              "decorationTechnique",
+              "decorationDescription",
+              "objectType",
+              "purpose",
+              "provenance",
+              "sample",
+              "residueAnalysis",
+              "amountSherdsWall",
+              "amountSherdsBase",
+              "amountSherdsHandles",
+              "amountSherdsLip",
+              "amountSherdsPedestal",
+              "amountSherdsLid",
+              "amountSherdsRim",
+              "amountSherdsRimBase",
+              "amountSherdsRimShoulder",
+              "amountSherdsOther",
+              "amountSherdsShoulder",
+              "amountSherdsPercent",
+              "hasCoat"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Metal:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "metalMaterial",
+              "formDescription",
+              "manufacturingMethod",
+              "decorationTechnique",
+              "objectType",
+              "vesselForm",
+              "vesselFormSpecific",
+              "provenance"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Grave:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Bone:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "boneType",
+              "species",
+              "boneClassification",
+              "burningGrade",
+              "objectType",
+              "biologicalAge",
+              "sex"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Terracotta:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "temper",
+              "temperAmount",
+              "temperParticles",
+              "clayStructure",
+              "coatColorInside",
+              "coatColorOutside",
+              "surfaceCondition",
+              "manufacturingMethod",
+              "decorationTechnique",
+              "formDescription",
+              "vesselForm",
+              "vesselFormSpecific",
+              "provenance",
+              "clayColorBreak",
+              "clayColorInside",
+              "clayColorOutside"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Photo:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Drawing:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Stone:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "material",
+              "temperAmount",
+              "treatment",
+              "workmanship",
+              "color",
+              "formDescription",
+              "objectType",
+              "architectureElement",
+              "purpose",
+              "origin",
+              "provenance"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Coin:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "metalMaterial",
+              "manufacturingMethod",
+              "preservedDiameter",
+              "frontSideDescription",
+              "reverseSideDescription",
+              "provenance",
+              "stampPositioning",
+              "denomination",
+              "mint",
+              "mintingRuler"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "PlasterFragment:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription",
+              "processor",
+              "campaign",
+              "date",
+              "isSameAs"
+            ]
+          },
+          {
+            "name": "hierarchy",
+            "fields": [
+              "hasChildren"
+            ]
+          },
+          {
+            "name": "workflow",
+            "fields": [
+              "isSubjectOf",
+              "isResultOf"
+            ]
+          },
+          {
+            "name": "identification",
+            "fields": [
+              "isInstanceOf"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoredIn",
+              "storagePlace"
+            ]
+          },
+          {
+            "name": "properties",
+            "fields": [
+              "description",
+              "hasRestoration",
+              "catalogueNumber",
+              "amount",
+              "condition",
+              "conditionAmount",
+              "conditionPercent",
+              "conditionComment",
+              "weight",
+              "storageInventoryNumber",
+              "comparison",
+              "bibliography",
+              "plasterComponents",
+              "color",
+              "composition",
+              "hasDecoration"
+            ]
+          },
+          {
+            "name": "dimension",
+            "fields": [
+              "dimensionHeight",
+              "dimensionLength",
+              "dimensionWidth",
+              "dimensionPerimeter",
+              "dimensionDiameter",
+              "dimensionThickness",
+              "dimensionOther",
+              "area"
+            ]
+          },
+          {
+            "name": "position",
+            "fields": [
+              "geometry",
+              "spatialLocation",
+              "dimensionVerticalExtent"
+            ]
+          },
+          {
+            "name": "time",
+            "fields": [
+              "period",
+              "dating"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:location",
+            "fields": [
+              "kgr_chru_datamodel:opAreaId",
+              "kgr_chru_datamodel:buildingName"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:floor",
+            "fields": [
+              "kgr_chru_datamodel:floorNummer",
+              "kgr_chru_datamodel:room"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:movableHeritage",
+            "fields": [
+              "kgr_chru_datamodel:movDate",
+              "kgr_chru_datamodel:movProcessor"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:object",
+            "fields": [
+              "kgr_chru_datamodel:findingId",
+              "kgr_chru_datamodel:objectName",
+              "kgr_chru_datamodel:objectType",
+              "kgr_chru_datamodel:qrCode",
+              "kgr_chru_datamodel:qrCodeCluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster",
+            "fields": [
+              "kgr_chru_datamodel:qrCodeCluster2Cluster"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:condition",
+            "fields": [
+              "kgr_chru_datamodel:regRiskAssessmentCondition",
+              "kgr_chru_datamodel:regConditionComplete",
+              "kgr_chru_datamodel:evacStay",
+              "kgr_chru_datamodel:regSalvageTransport",
+              "kgr_chru_datamodel:notes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:registration",
+            "fields": [
+              "kgr_chru_datamodel:regDate",
+              "kgr_chru_datamodel:regProcessor",
+              "kgr_chru_datamodel:regContamination",
+              "kgr_chru_datamodel:regContaminationNote",
+              "kgr_chru_datamodel:regCleaning",
+              "kgr_chru_datamodel:regPhotoDocu",
+              "kgr_chru_datamodel:regPriority",
+              "kgr_chru_datamodel:regAcquisitionCompleted",
+              "kgr_chru_datamodel:regNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:cleaning",
+            "fields": [
+              "kgr_chru_datamodel:clNewCode",
+              "kgr_chru_datamodel:clDate",
+              "kgr_chru_datamodel:clProcessor",
+              "kgr_chru_datamodel:clType",
+              "kgr_chru_datamodel:clWet",
+              "kgr_chru_datamodel:clDry",
+              "kgr_chru_datamodel:clStatus",
+              "kgr_chru_datamodel:clNotes"
+            ]
+          },
+          {
+            "name": "kgr_chru_datamodel:drying",
+            "fields": [
+              "kgr_chru_datamodel:dryNewCode",
+              "kgr_chru_datamodel:dryProcessor",
+              "kgr_chru_datamodel:dryDepot",
+              "kgr_chru_datamodel:dryDate",
+              "kgr_chru_datamodel:dryTechnique",
+              "kgr_chru_datamodel:dryHumidity",
+              "kgr_chru_datamodel:dryTemperature",
+              "kgr_chru_datamodel:dryStartTime",
+              "kgr_chru_datamodel:dryStatus",
+              "kgr_chru_datamodel:dryDepotStatus",
+              "kgr_chru_datamodel:dryNotes"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "Excavation:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Sample:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "TypeCatalog:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Type:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StoragePlace:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StorageBuilding:default": {
+        "hidden": [],
+        "fields": {},
+        "groups": [
+          {
+            "name": "stem",
+            "fields": [
+              "identifier",
+              "category",
+              "shortDescription"
+            ]
+          },
+          {
+            "name": "inventory",
+            "fields": [
+              "isStoragePlaceOf"
+            ]
+          }
+        ],
+        "valuelists": {}
+      },
+      "StorageRoom:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StorageShelf:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StorageCompartment:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StorageBox:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "StorageBag:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      },
+      "Process:default": {
+        "hidden": [],
+        "fields": {},
+        "valuelists": {}
+      }
+    },
+    "order": [
+      "Project",
+      "Operation",
+      "Building",
+      "Survey",
+      "Place",
+      "FeatureGroup",
+      "Feature",
+      "Layer",
+      "Grave",
+      "Burial",
+      "Architecture",
+      "Floor",
+      "FeatureSegment",
+      "Area",
+      "SurveyUnit",
+      "Excavation",
+      "Profile",
+      "Planum",
+      "BuildingPart",
+      "Level",
+      "Room",
+      "RoomCeiling",
+      "RoomWall",
+      "InnerWall",
+      "OuterWall",
+      "RoomFloor",
+      "Roof",
+      "Opening",
+      "Door",
+      "Window",
+      "Stairs",
+      "DesignElement",
+      "Damage",
+      "Find",
+      "Pottery",
+      "Terracotta",
+      "Brick",
+      "Bone",
+      "Glass",
+      "Metal",
+      "Stone",
+      "Wood",
+      "Coin",
+      "PlasterFragment",
+      "Mollusk",
+      "FindCollection",
+      "Inscription",
+      "Sample",
+      "Process",
+      "Image",
+      "Drawing",
+      "Photo",
+      "TypeCatalog",
+      "Type",
+      "StoragePlace",
+      "StorageBuilding",
+      "StorageRoom",
+      "StorageShelf",
+      "StorageCompartment",
+      "StorageBox",
+      "StorageBag"
+    ],
+    "valuelists": {
+      "kgr_chru_datamodel:SingleDamage": {
+        "values": {
+          "Single Damage": {
+            "label": {
+              "en": "Single Damage"
+            }
+          },
+          "Cluster Damage": {
+            "label": {
+              "en": "Cluster Damage"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Yes": {
+        "values": {
+          "Yes": {
+            "label": {
+              "en": "Yes"
+            }
+          },
+          "No": {
+            "label": {
+              "en": "No"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:CC0": {
+        "values": {
+          "CCO": {
+            "label": {
+              "en": "CC0 "
+            },
+            "description": {
+              "en": "CC0 = No Symptoms"
+            }
+          },
+          "CC1 = Minor Symptoms": {
+            "label": {
+              "en": "CC1"
+            },
+            "description": {
+              "en": "CC1 = Minor Symptoms"
+            }
+          },
+          "CC2 = Moderate Symptoms": {
+            "label": {
+              "en": "CC2 "
+            },
+            "description": {
+              "en": "CC2 = Moderate Symptoms"
+            }
+          },
+          "CC3 = Major Symptoms": {
+            "label": {
+              "en": "CC3 "
+            },
+            "description": {
+              "en": "CC3 = Major Symptoms"
+            }
+          },
+          "CC4 = Partial Collapse/Collapse/ Total Loss": {
+            "label": {
+              "en": "CC4"
+            },
+            "description": {
+              "en": "CC4 = Partial Collapse/Collapse/ Total Loss"
+            }
+          },
+          "CC0": {},
+          "CC1": {},
+          "CC2": {},
+          "CC3": {},
+          "CC4": {}
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {
+          "en": "Condition Class"
+        }
+      },
+      "kgr_chru_datamodel:UC1longterm3yearsandmore": {
+        "values": {
+          "UC1 = long term (3 years and more)": {
+            "label": {
+              "en": "UC1"
+            },
+            "description": {
+              "en": "UC1 = long term (3 years and more)"
+            }
+          },
+          "UC2 = intermediate (1-3 years)": {
+            "label": {
+              "en": "UC2"
+            },
+            "description": {
+              "en": "UC2 = intermediate (1-3 years)"
+            }
+          },
+          "UC3 = short term (within a year)": {
+            "label": {
+              "en": "UC3 "
+            },
+            "description": {
+              "en": "UC3 = short term (within a year)"
+            }
+          },
+          "UC4 = urgent and immediate (within 3 months)": {
+            "label": {
+              "en": "UC4 ="
+            },
+            "description": {
+              "en": "UC4 = urgent and immediate (within 3 months)"
+            }
+          },
+          "UC1": {},
+          "UC2": {},
+          "UC3": {},
+          "UC4": {}
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:low": {
+        "values": {
+          "low": {
+            "label": {
+              "en": "low"
+            },
+            "description": {
+              "en": "low"
+            }
+          },
+          "medium": {
+            "label": {
+              "en": "medium"
+            },
+            "description": {
+              "en": "medium"
+            }
+          },
+          "high": {
+            "label": {
+              "en": "high"
+            },
+            "description": {
+              "en": "high"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:yes": {
+        "values": {
+          "Yes": {
+            "label": {
+              "en": "Yes"
+            },
+            "description": {
+              "en": "Yes"
+            }
+          },
+          "No": {
+            "label": {
+              "en": "No"
+            },
+            "description": {
+              "en": "No"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Inaccessible": {
+        "values": {
+          "Inaccessible": {
+            "label": {
+              "en": "Inaccessible"
+            },
+            "description": {
+              "en": "Inaccessible"
+            }
+          },
+          "Accessible": {
+            "label": {
+              "en": "Accessible"
+            },
+            "description": {
+              "en": "Accessible"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:complete": {
+        "values": {
+          "Complete": {},
+          "Incomplete": {},
+          "In Progress": {},
+          "Not Started": {}
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-02",
+        "description": {}
+      },
+      "kgr_chru_datamodel:floor-nr": {
+        "values": {
+          "0": {
+            "label": {
+              "en": "0"
+            },
+            "description": {
+              "en": "0"
+            }
+          },
+          "2": {
+            "label": {
+              "en": "2"
+            },
+            "description": {
+              "en": "2"
+            }
+          },
+          "3": {
+            "label": {
+              "en": "3"
+            },
+            "description": {
+              "en": "3"
+            }
+          },
+          "4": {
+            "label": {
+              "en": "4"
+            },
+            "description": {
+              "en": "4"
+            }
+          },
+          "-1": {
+            "label": {
+              "en": "-1"
+            },
+            "description": {
+              "en": "-1"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:object-type": {
+        "values": {
+          "Single object": {
+            "label": {
+              "en": "Single object"
+            },
+            "description": {
+              "en": "Single object"
+            }
+          },
+          "Cluster": {
+            "label": {
+              "en": "Cluster"
+            },
+            "description": {
+              "en": "Cluster"
+            }
+          },
+          "Attached decorative building component (built-in-fixture)": {
+            "label": {
+              "en": "Attached decorative building component (built-in-fixture)"
+            },
+            "description": {
+              "en": "Attached decorative building component (built-in-fixture)"
+            }
+          },
+          "Architectural Component": {
+            "label": {
+              "en": "Architectural Component"
+            },
+            "description": {
+              "en": "Architectural Component"
+            }
+          },
+          "NULL": {
+            "label": {
+              "en": "NULL"
+            },
+            "description": {
+              "en": "NULL"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:condition": {
+        "values": {
+          "Stable": {
+            "label": {
+              "en": "Stable"
+            },
+            "description": {
+              "en": "Stable"
+            }
+          },
+          "Unstable / Fragile": {
+            "label": {
+              "en": "Unstable / Fragile"
+            },
+            "description": {
+              "en": "Unstable / Fragile"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:condition2": {
+        "values": {
+          "Complete Intact": {
+            "label": {
+              "en": "Complete Intact"
+            },
+            "description": {
+              "en": "Complete Intact"
+            }
+          },
+          "Incomplete Intact": {
+            "label": {
+              "en": "Incomplete Intact"
+            },
+            "description": {
+              "en": "Incomplete Intact"
+            }
+          },
+          "Complete Fragmented": {
+            "label": {
+              "en": "Complete Fragmented"
+            },
+            "description": {
+              "en": "Complete Fragmented"
+            }
+          },
+          "Incomplete Fragmented": {
+            "label": {
+              "en": "Incomplete Fragmented"
+            },
+            "description": {
+              "en": "Incomplete Fragmented"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:evacuation": {
+        "values": {
+          "Abseiling,  Packaging of Elements and Transport": {},
+          "Storing of Elements/Objects": {}
+        }
+      },
+      "kgr_chru_datamodel:cleaning": {
+        "values": {
+          "wet cleaning": {
+            "label": {
+              "en": "wet cleaning"
+            },
+            "description": {
+              "en": "wet cleaning"
+            }
+          },
+          "dry cleaning": {
+            "label": {
+              "en": "dry cleaning"
+            },
+            "description": {
+              "en": "dry cleaning"
+            }
+          },
+          "none": {
+            "label": {
+              "en": "none"
+            },
+            "description": {
+              "en": "none"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:photodocu": {
+        "values": {
+          "Photographic Documentation on admission": {},
+          "No Documentation": {}
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:cleaning-type": {
+        "values": {
+          "Wet": {
+            "label": {
+              "en": "Wet"
+            },
+            "description": {
+              "en": "Wet"
+            }
+          },
+          "Dry": {
+            "label": {
+              "en": "Dry"
+            },
+            "description": {
+              "en": "Dry"
+            }
+          },
+          "None": {
+            "label": {
+              "en": "None"
+            },
+            "description": {
+              "en": "None"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:wet-cleaning": {
+        "values": {
+          "Wet cleaning": {
+            "label": {
+              "en": "Wet cleaning"
+            },
+            "description": {
+              "en": "Wet cleaning"
+            }
+          },
+          "Damp cleaning": {
+            "label": {
+              "en": "Damp cleaning"
+            },
+            "description": {
+              "en": "Damp cleaning"
+            }
+          },
+          "Decontaminated": {
+            "label": {
+              "en": "Decontaminated"
+            },
+            "description": {
+              "en": "Decontaminated"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:dry-cleaning": {
+        "values": {
+          "With goat hairbrush and simultaneous vacuuming": {
+            "label": {
+              "en": "With goat hairbrush and simultaneous vacuuming"
+            },
+            "description": {
+              "en": "With goat hairbrush and simultaneous vacuuming"
+            }
+          },
+          "Cleaning with Sponge (Natural latex)": {
+            "label": {
+              "en": "Cleaning with Sponge (Natural latex)"
+            },
+            "description": {
+              "en": "Cleaning with Sponge (Natural latex)"
+            }
+          },
+          "Cleaning with PU sponge for paper (latex free, high density)": {
+            "label": {
+              "en": "Cleaning with PU sponge for paper (latex free, high density)"
+            },
+            "description": {
+              "en": "Cleaning with PU sponge for paper (latex free, high density)"
+            }
+          },
+          "Decontaminated": {
+            "label": {
+              "en": "Decontaminated"
+            },
+            "description": {
+              "en": "Decontaminated"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:dry-technique": {
+        "values": {
+          "Drying test": {
+            "label": {
+              "en": "Drying test"
+            },
+            "description": {
+              "en": "Drying test"
+            }
+          },
+          "Drying cabinet": {
+            "label": {
+              "en": "Drying cabinet"
+            },
+            "description": {
+              "en": "Drying cabinet"
+            }
+          },
+          "Freezer": {
+            "label": {
+              "en": "Freezer"
+            },
+            "description": {
+              "en": "Freezer"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2025-12-03",
+        "description": {}
+      },
+      "kgr_chru_datamodel:SiteName": {
+        "values": {
+          "Single Monument": {
+            "label": {
+              "en": "Single Monument"
+            }
+          },
+          "Ensemble": {
+            "label": {
+              "en": "Ensemble"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-14",
+        "description": {}
+      },
+      "kgr_chru_datamodel:SiteContext": {
+        "values": {
+          "Urban": {
+            "label": {
+              "en": "Urban"
+            }
+          },
+          "Suburban": {
+            "label": {
+              "en": "Suburban"
+            }
+          },
+          "Rural": {
+            "label": {
+              "en": "Rural"
+            }
+          },
+          "Isolated": {
+            "label": {
+              "en": "Isolated"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-14",
+        "description": {}
+      },
+      "kgr_chru_datamodel:AreaUtilization": {
+        "values": {
+          "Residential": {
+            "label": {
+              "en": "Residential"
+            }
+          },
+          "Industrial": {
+            "label": {
+              "en": "Industrial"
+            }
+          },
+          "Public": {
+            "label": {
+              "en": "Public"
+            }
+          },
+          "Religious": {
+            "label": {
+              "en": "Religious"
+            }
+          },
+          "Archaeological Site/s": {
+            "label": {
+              "en": "Archaeological Site/s"
+            }
+          },
+          "Other": {
+            "label": {
+              "en": "Other"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-14",
+        "description": {}
+      },
+      "kgr_chru_datamodel:PotectionLevel": {
+        "values": {
+          "Unknown": {
+            "label": {
+              "en": "Unknown"
+            }
+          },
+          "Unprotected": {
+            "label": {
+              "en": "Unprotected"
+            }
+          },
+          "Local": {
+            "label": {
+              "en": "Local"
+            }
+          },
+          "National": {
+            "label": {
+              "en": "National"
+            }
+          },
+          "International": {
+            "label": {
+              "en": "International"
+            }
+          },
+          "Other": {
+            "label": {
+              "en": "Other"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-14",
+        "description": {}
+      },
+      "kgr_chru_datamodel:accessibility": {
+        "values": {
+          "Accessible": {
+            "label": {
+              "en": "Accessible"
+            }
+          },
+          "Inaccessible": {
+            "label": {
+              "en": "Inaccessible"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:THWStatus": {
+        "values": {
+          "Complete": {
+            "label": {
+              "en": "Complete"
+            }
+          },
+          "Incomplete": {
+            "label": {
+              "en": "Incomplete"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:floorsbelow": {
+        "values": {
+          "Known": {
+            "label": {
+              "en": "Known"
+            }
+          },
+          "Unknown": {
+            "label": {
+              "en": "Unknown"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Damageextent": {
+        "values": {
+          "0%": {
+            "label": {
+              "en": "0%"
+            }
+          },
+          "25%": {
+            "label": {
+              "en": "25%"
+            }
+          },
+          "50%": {
+            "label": {
+              "en": "50%"
+            }
+          },
+          "75%": {
+            "label": {
+              "en": "75%"
+            }
+          },
+          "100%": {
+            "label": {
+              "en": "100%"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Cconditionclass": {
+        "values": {
+          "CC0": {
+            "label": {
+              "en": "CC0 = No Symptoms"
+            }
+          },
+          "CC1": {
+            "label": {
+              "en": "CC1 = Minor Symptoms"
+            }
+          },
+          "CC2": {
+            "label": {
+              "en": "CC2 = Moderate Symptoms"
+            }
+          },
+          "CC3": {
+            "label": {
+              "en": "CC3 = Major Symptoms"
+            }
+          },
+          "CC4": {
+            "label": {
+              "en": "CC4 = Partial Collapse/Collapse/ Total Loss"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Urgencyclass": {
+        "values": {
+          "UC1": {
+            "label": {
+              "en": "UC1 = Long Term (3 years and more)"
+            }
+          },
+          "UC2": {
+            "label": {
+              "en": "UC2 = Intermediate (1-3 years)"
+            }
+          },
+          "UC3": {
+            "label": {
+              "en": "UC3 = Short Term (within a year)"
+            }
+          },
+          "UC4": {
+            "label": {
+              "en": "UC4 = Urgent and Immediate (within 3 Months)"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Constructiontype": {
+        "values": {
+          "Solid Construction": {
+            "label": {
+              "en": "Solid Construction"
+            }
+          },
+          "Skeleton Construction": {
+            "label": {
+              "en": "Skeleton Construction"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Conditionclass": {
+        "values": {
+          "CC0": {
+            "label": {
+              "en": "CC0 = No symptoms"
+            }
+          },
+          "CC1": {
+            "label": {
+              "en": "CC1 = Minor symptoms"
+            }
+          },
+          "CC2": {
+            "label": {
+              "en": "CC2 = Moderate symptoms"
+            }
+          },
+          "CC3": {
+            "label": {
+              "en": "CC3 = Major symptoms"
+            }
+          },
+          "CC4": {
+            "label": {
+              "en": "CC4 = Partial Collapse/Collapse/ Total Loss"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:Recommendationclass": {
+        "values": {
+          "RC1": {
+            "label": {
+              "en": "RC1 = Maintenance/Preventive Conservation"
+            }
+          },
+          "RC2": {
+            "label": {
+              "en": "RC2 = Moderate Repair and/or further Investigation"
+            }
+          },
+          "RC3": {
+            "label": {
+              "en": "RC3 = Major intervention based on diagnosis"
+            }
+          },
+          "RC4": {
+            "label": {
+              "en": "RC4= Emergency construction measures"
+            }
+          },
+          "NULL": {
+            "label": {
+              "en": "<NULL>"
+            }
+          }
+        },
+        "createdBy": "Elvira Iacono",
+        "creationDate": "2026-01-20",
+        "description": {}
+      },
+      "kgr_chru_datamodel:clearing_cleaning": {
+        "values": {
+          "Cleaning": {},
+          "Clearing of Rubble and Rubble Managment": {},
+          "Decontamination": {}
+        }
+      },
+      "kgr_chru_datamodel:component_primary": {
+        "values": {
+          " Pillar": {},
+          "Ceiling": {},
+          "Facade": {},
+          "Floor": {},
+          "Foundation": {},
+          "Structural roof component": {},
+          "Wall": {}
+        }
+      },
+      "kgr_chru_datamodel:component_secondary": {
+        "values": {
+          "Balcony/Terrace": {},
+          "Ceiling Covering": {},
+          "Door": {},
+          "Drainage": {},
+          "Insulation": {},
+          "Ornamental Components": {},
+          "Ramp": {},
+          "Roofing": {},
+          "Staircase": {},
+          "Technical Building Equipment": {},
+          "Wall Covering": {},
+          "Window": {}
+        }
+      },
+      "kgr_chru_datamodel:construction_materials": {
+        "values": {
+          "Brick": {},
+          "Clay": {},
+          "Concrete": {},
+          "Iron/Steel": {},
+          "Other": {},
+          "Stone": {},
+          "Timber": {}
+        }
+      },
+      "kgr_chru_datamodel:damage": {
+        "values": {
+          "Burned": {},
+          "Change in Material and Properties": {},
+          "Collapse": {},
+          "Contamination": {},
+          "Crack": {},
+          "Damage of load bearing Capacity": {},
+          "Deformation": {},
+          "Loss of Structure": {},
+          "Loss of Surface": {},
+          "Missing Building Components": {},
+          "Other": {},
+          "Partial Collapse": {},
+          "Wet": {}
+        }
+      },
+      "kgr_chru_datamodel:documentation_assessment": {
+        "values": {
+          "3D Laser Scan": {},
+          "Detailed Photographic Documentation": {},
+          "Orthomosaic": {},
+          "SfM Model": {}
+        }
+      },
+      "kgr_chru_datamodel:emergency": {
+        "values": {
+          "Application of hot lime Mortar for Desalination": {},
+          "Drainage (e.g. Application of Poultices for damp structural Components)": {}
+        }
+      },
+      "kgr_chru_datamodel:foundation": {
+        "values": {
+          "Plate Foundation": {},
+          "Point Foundation": {},
+          "Strip Foundation": {}
+        }
+      },
+      "kgr_chru_datamodel:foundation_materials": {
+        "values": {
+          "Brick": {},
+          "Clay": {},
+          "Concrete": {},
+          "Iron/Steel": {},
+          "Other": {},
+          "Stone": {},
+          "Timber": {}
+        }
+      },
+      "kgr_chru_datamodel:hazard": {
+        "values": {
+          "Earthquake": {},
+          "Explosion": {},
+          "Fire": {},
+          "Flooding": {},
+          "Human-made": {},
+          "Other": {},
+          "Storm": {},
+          "Vulcanic Eruption": {}
+        }
+      },
+      "kgr_chru_datamodel:investigation": {
+        "values": {
+          "Investigation of an Expert regarding Mobile Heritage": {},
+          "Kind of Expert: Investigation of a Structural Engineer": {}
+        }
+      },
+      "kgr_chru_datamodel:material_facade": {
+        "values": {
+          "Brick": {},
+          "Clay": {},
+          "Other": {},
+          "Plaster": {},
+          "Stone": {},
+          "Timber": {}
+        }
+      },
+      "kgr_chru_datamodel:material_roofing": {
+        "values": {
+          "Bitumen Coating": {},
+          "Clay": {},
+          "Concrete": {},
+          "Metal": {},
+          "Other": {},
+          "Straw": {},
+          "Tiles": {},
+          "Timber": {}
+        }
+      },
+      "kgr_chru_datamodel:monument_category": {
+        "values": {
+          "Building/s": {},
+          "Other": {},
+          "Ruin/s": {},
+          "Statue/s": {},
+          "Technical Structure/s": {}
+        }
+      },
+      "kgr_chru_datamodel:protection": {
+        "values": {
+          "Cover of Elements,  Objects and Building Parts": {},
+          "Temporary Roof Covering": {}
+        }
+      },
+      "kgr_chru_datamodel:risk_assessment": {
+        "values": {
+          "Impact on Safety": {},
+          "Potential Loss of Historical Substance": {},
+          "Potential Loss of Historical Surface": {},
+          "Secondary Damage": {}
+        }
+      },
+      "kgr_chru_datamodel:roof_construction": {
+        "values": {
+          "Metal Construction": {},
+          "Timber": {}
+        }
+      },
+      "kgr_chru_datamodel:salvage": {
+        "values": {
+          "Dismantling of Elements/Objects": {},
+          "Salvaging of Elements/Objects": {}
+        }
+      },
+      "kgr_chru_datamodel:stabilization": {
+        "values": {
+          "Crack Repair": {},
+          "Securing of loose Elements/Objects": {},
+          "Securing of loose Layers of Material": {},
+          "Stabilization of Building Components (e.g. emergency shoring and bracing, tie beams, anchoring systems)": {}
+        }
+      },
+      "kgr_chru_datamodel:type_roof": {
+        "values": {
+          "Flat Roof": {},
+          "Gable-end Roof": {},
+          "Hipped-end Roof": {},
+          "Jerkinhead Roof": {},
+          "Mansard Roof": {},
+          "Monopitch": {},
+          "Other": {}
+        }
+      }
+    },
+    "category": "Configuration",
+    "identifier": "Configuration",
+    "id": "configuration",
+    "languages": {
+      "en": {
+        "groups": {
+          "kgr_chru_datamodel:chruEditing": "CHRU Editing",
+          "kgr_chru_datamodel:location": "Location",
+          "kgr_chru_datamodel:assessment": "Assessment",
+          "kgr_chru_datamodel:furtherMeasuresOnSite": "Further Measures on Site",
+          "kgr_chru_datamodel:room": "Room",
+          "kgr_chru_datamodel:media": "Media",
+          "kgr_chru_datamodel:floor": "Floor",
+          "kgr_chru_datamodel:movableHeritage": "Movable Heritage",
+          "kgr_chru_datamodel:object": "Object",
+          "kgr_chru_datamodel:ifAClusterIsSeparatedIntoAnotherCluster": "If a cluster is separated into another cluster",
+          "kgr_chru_datamodel:mediaFindings": "Media Findings",
+          "kgr_chru_datamodel:condition": "Condition",
+          "kgr_chru_datamodel:registration": "Registration",
+          "kgr_chru_datamodel:cleaning": "Cleaning",
+          "kgr_chru_datamodel:drying": "Drying",
+          "kgr_chru_datamodel:hazardEvent": "Hazard Event",
+          "kgr_chru_datamodel:site": "Site",
+          "kgr_chru_datamodel:numberOfMonuments": "Number of Monuments",
+          "kgr_chru_datamodel:periodOfConstruction": "Period of Construction",
+          "kgr_chru_datamodel:estimatedTimeOfConstruction": "Estimated Time of Construction",
+          "kgr_chru_datamodel:culturalHeritageInformation": "Cultural Heritage Information",
+          "kgr_chru_datamodel:building": "Building",
+          "kgr_chru_datamodel:floors": "Floors",
+          "kgr_chru_datamodel:floorsBelow": "Floors below",
+          "kgr_chru_datamodel:foundation": "Foundation",
+          "kgr_chru_datamodel:innerSupportingConstruction": "Inner Supporting Construction",
+          "kgr_chru_datamodel:outerWallsFacade": "Outer Walls / Facade",
+          "kgr_chru_datamodel:roof": "Roof",
+          "kgr_chru_datamodel:overallAssessment": "Overall Assessment",
+          "kgr_chru_datamodel:orientationSystemAndMedia": "Orientation System and Media"
+        },
+        "categories": {
+          "Damage": {
+            "fields": {
+              "kgr_chru_datamodel:processor": {
+                "label": "Processor"
+              },
+              "kgr_chru_datamodel:date": {
+                "label": "Date"
+              },
+              "kgr_chru_datamodel:operationalAreaId": {
+                "label": "Operational Area ID"
+              },
+              "kgr_chru_datamodel:buildingId": {
+                "label": "Building ID"
+              },
+              "kgr_chru_datamodel:floorNummer": {
+                "label": "Floor Nr./Facade "
+              },
+              "kgr_chru_datamodel:roomNr": {
+                "label": "Room Nr."
+              },
+              "kgr_chru_datamodel:damage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:constructionalElementPrimary": {
+                "label": "Constructional Element (Primary Components)"
+              },
+              "kgr_chru_datamodel:constructionalElementSecondary": {
+                "label": "Constructional Element (Secondary Components)"
+              },
+              "kgr_chru_datamodel:constructionalElementSecondaryOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:loadBearingComponent": {
+                "label": "Load-Bearing Component"
+              },
+              "kgr_chru_datamodel:damageType": {
+                "label": "Type of Damage"
+              },
+              "kgr_chru_datamodel:other": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:conditionClass": {
+                "label": "Condition Class"
+              },
+              "kgr_chru_datamodel:riskAssessment": {
+                "label": "Risk Assessment"
+              },
+              "kgr_chru_datamodel:urgencyClass": {
+                "label": "Urgency class"
+              },
+              "kgr_chru_datamodel:documentationAssessment": {
+                "label": "Documentation and Assessment"
+              },
+              "kgr_chru_datamodel:documentationAssessmentOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:furtherInvestigation": {
+                "label": "Further Investigation"
+              },
+              "kgr_chru_datamodel:furtherInvestigationOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:clearingCleaning": {
+                "label": "Clearing and Cleaning"
+              },
+              "kgr_chru_datamodel:clearingCleaningOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:stabilization": {
+                "label": "Stabilization"
+              },
+              "kgr_chru_datamodel:stabilizationOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:protection": {
+                "label": "Protection"
+              },
+              "kgr_chru_datamodel:protectionOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:salvageDismantling": {
+                "label": "Salvage and Dismantling"
+              },
+              "kgr_chru_datamodel:salvageDismantlingOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:emergencyConservation": {
+                "label": "Emergency Conservation"
+              },
+              "kgr_chru_datamodel:emergencyConservationOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:evacuationStoring": {
+                "label": "Evacuation and Storing"
+              },
+              "kgr_chru_datamodel:evacuationStoringOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:priority": {
+                "label": "Priority"
+              },
+              "kgr_chru_datamodel:measuresCompleted": {
+                "label": "Measures Completed"
+              },
+              "kgr_chru_datamodel:notes": {
+                "label": "Notes"
+              }
+            }
+          },
+          "Level": {
+            "fields": {
+              "kgr_chru_datamodel:date": {
+                "label": "Date"
+              },
+              "kgr_chru_datamodel:processor": {
+                "label": "Processor"
+              },
+              "kgr_chru_datamodel:buildingId": {
+                "label": "Building"
+              },
+              "kgr_chru_datamodel:floorNr": {
+                "label": "Floor"
+              },
+              "kgr_chru_datamodel:roomNr": {
+                "label": "Room Nr."
+              },
+              "kgr_chru_datamodel:roomDesignation": {
+                "label": "Room Designation"
+              },
+              "kgr_chru_datamodel:accessibility": {
+                "label": "Accessibility"
+              },
+              "kgr_chru_datamodel:roomArea": {
+                "label": "Area m²"
+              },
+              "kgr_chru_datamodel:damage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:damageNotes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:rubble": {
+                "label": "Rubble"
+              },
+              "kgr_chru_datamodel:rubbleNotes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:decorative": {
+                "label": "Attached decorative building components"
+              },
+              "kgr_chru_datamodel:decorativeNotes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:movableHeritage": {
+                "label": "Movable Heritage"
+              },
+              "kgr_chru_datamodel:movableHeritageNotes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:priority": {
+                "label": "Priority"
+              },
+              "kgr_chru_datamodel:basisDocumentation": {
+                "label": "Basic Documentation"
+              },
+              "kgr_chru_datamodel:heritageAssessment": {
+                "label": "Cultural Heritage Assessment"
+              },
+              "kgr_chru_datamodel:mHeritageAcquisition": {
+                "label": "Movable Assessment Completed"
+              },
+              "kgr_chru_datamodel:notesDec": {
+                "label": "Notes"
+              }
+            }
+          },
+          "Find": {
+            "fields": {
+              "kgr_chru_datamodel:opAreaId": {
+                "label": "Operational Area ID "
+              },
+              "kgr_chru_datamodel:buildingName": {
+                "label": "Building ID"
+              },
+              "kgr_chru_datamodel:floorNummer": {
+                "label": "Floor Nr."
+              },
+              "kgr_chru_datamodel:movDate": {
+                "label": "Date"
+              },
+              "kgr_chru_datamodel:movProcessor": {
+                "label": "Processor"
+              },
+              "kgr_chru_datamodel:findingId": {
+                "label": "Finding ID"
+              },
+              "kgr_chru_datamodel:objectName": {
+                "label": "Name/Title"
+              },
+              "kgr_chru_datamodel:objectType": {
+                "label": "Object Type"
+              },
+              "kgr_chru_datamodel:qrCode": {
+                "label": "QR-Code (Single object)"
+              },
+              "kgr_chru_datamodel:qrCodeCluster": {
+                "label": "QR-Code (Cluster)"
+              },
+              "kgr_chru_datamodel:qrCodeCluster2Cluster": {
+                "label": "QR-Code (Cluster from Cluster)"
+              },
+              "kgr_chru_datamodel:room": {
+                "label": "Room"
+              },
+              "kgr_chru_datamodel:regRiskAssessmentCondition": {
+                "label": "Condition I"
+              },
+              "kgr_chru_datamodel:regConditionComplete": {
+                "label": "Condition II"
+              },
+              "kgr_chru_datamodel:evacStay": {
+                "label": "Evacuated/Not evacuated"
+              },
+              "kgr_chru_datamodel:regSalvageTransport": {
+                "label": "Salvage and Transportation Note"
+              },
+              "kgr_chru_datamodel:notes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:regDate": {
+                "label": "Date of Registration"
+              },
+              "kgr_chru_datamodel:regProcessor": {
+                "label": "Processor (Registration)"
+              },
+              "kgr_chru_datamodel:regContamination": {
+                "label": "Contamination"
+              },
+              "kgr_chru_datamodel:regContaminationNote": {
+                "label": "Notes (Contamination)"
+              },
+              "kgr_chru_datamodel:regCleaning": {
+                "label": "Cleaning"
+              },
+              "kgr_chru_datamodel:regPhotoDocu": {
+                "label": "Photo Documentation (Registration)"
+              },
+              "kgr_chru_datamodel:regPriority": {
+                "label": "Priority"
+              },
+              "kgr_chru_datamodel:regAcquisitionCompleted": {
+                "label": "Acquisition completed"
+              },
+              "kgr_chru_datamodel:regNotes": {
+                "label": "Notes (Registration)"
+              },
+              "kgr_chru_datamodel:clNewCode": {
+                "label": "New QR-Code (single) of new/separated object assigned in 'Movable Heritage' "
+              },
+              "kgr_chru_datamodel:clDate": {
+                "label": "Date of Cleaning"
+              },
+              "kgr_chru_datamodel:clProcessor": {
+                "label": "Processor (Cleaning)"
+              },
+              "kgr_chru_datamodel:clType": {
+                "label": "Type of Cleaning"
+              },
+              "kgr_chru_datamodel:clWet": {
+                "label": "Wet Cleaning - Type"
+              },
+              "kgr_chru_datamodel:clDry": {
+                "label": "Dry Cleaning - Type"
+              },
+              "kgr_chru_datamodel:clStatus": {
+                "label": "Status: Cleaning Completed"
+              },
+              "kgr_chru_datamodel:clNotes": {
+                "label": "Notes (Cleaning)"
+              },
+              "kgr_chru_datamodel:dryNewCode": {
+                "label": "New QR-Code (single) of new object assigned in 'Movable Heritage' "
+              },
+              "kgr_chru_datamodel:dryProcessor": {
+                "label": "Processor (Drying)"
+              },
+              "kgr_chru_datamodel:dryDepot": {
+                "label": "Storage unit while drying"
+              },
+              "kgr_chru_datamodel:dryDate": {
+                "label": "Date of Drying (Start)"
+              },
+              "kgr_chru_datamodel:dryTechnique": {
+                "label": "Technique"
+              },
+              "kgr_chru_datamodel:dryHumidity": {
+                "label": "Current Relative Humidity"
+              },
+              "kgr_chru_datamodel:dryTemperature": {
+                "label": "Temperature"
+              },
+              "kgr_chru_datamodel:dryStartTime": {
+                "label": "Start Time"
+              },
+              "kgr_chru_datamodel:dryStatus": {
+                "label": "Status: Drying Completed"
+              },
+              "kgr_chru_datamodel:dryDepotStatus": {
+                "label": "Object removed from storage unit list"
+              },
+              "kgr_chru_datamodel:dryNotes": {
+                "label": "Notes (Drying)"
+              }
+            }
+          },
+          "Survey": {
+            "fields": {
+              "kgr_chru_datamodel:date": {
+                "label": "Date"
+              },
+              "kgr_chru_datamodel:processor": {
+                "label": "Processor"
+              },
+              "kgr_chru_datamodel:name": {
+                "label": "Name"
+              },
+              "kgr_chru_datamodel:address": {
+                "label": "Address"
+              },
+              "kgr_chru_datamodel:city": {
+                "label": "City"
+              },
+              "kgr_chru_datamodel:region": {
+                "label": "Region"
+              },
+              "kgr_chru_datamodel:country": {
+                "label": "Country"
+              },
+              "kgr_chru_datamodel:operationalAreaId": {
+                "label": "Operational Area ID"
+              },
+              "kgr_chru_datamodel:hazardEvent": {
+                "label": "Hazard Event (Primary and Secondary)"
+              },
+              "kgr_chru_datamodel:hazardEventOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:grossOp": {
+                "label": "Area"
+              },
+              "kgr_chru_datamodel:siteName": {
+                "label": "Type"
+              },
+              "kgr_chru_datamodel:monumentsAmount": {
+                "label": "Number of Monuments"
+              },
+              "kgr_chru_datamodel:monumentsCategory": {
+                "label": "Monument Category"
+              },
+              "kgr_chru_datamodel:monumentCategoryOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:siteContext": {
+                "label": "Site Context"
+              },
+              "kgr_chru_datamodel:areaUtilization": {
+                "label": "Area Utilization"
+              },
+              "kgr_chru_datamodel:areaUtilizationOther": {
+                "label": "Other Details"
+              },
+              "kgr_chru_datamodel:useBeforeEvent": {
+                "label": "Use of Monument before Event"
+              },
+              "kgr_chru_datamodel:historicUse": {
+                "label": "Historic Uses of Monument"
+              },
+              "kgr_chru_datamodel:consructionYearKnownPeriod": {
+                "label": "Period of Construction"
+              },
+              "kgr_chru_datamodel:constructionYearUnknownPeriod": {
+                "label": "Estimated Time of Construction"
+              },
+              "kgr_chru_datamodel:siteDescription": {
+                "label": "Site Description"
+              },
+              "kgr_chru_datamodel:protectionLevel": {
+                "label": "Level of Protection"
+              },
+              "kgr_chru_datamodel:protectionLevelOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:authority": {
+                "label": "Responsable Local Authority"
+              },
+              "kgr_chru_datamodel:heritageInventoryNumber": {
+                "label": "Heritage Inventory Number"
+              },
+              "kgr_chru_datamodel:intangibleHeritage": {
+                "label": "Intangible Heritage"
+              },
+              "kgr_chru_datamodel:intangibleHeritageNote": {
+                "label": "Notes"
+              }
+            }
+          },
+          "Building": {
+            "fields": {
+              "kgr_chru_datamodel:date": {
+                "label": "Date"
+              },
+              "kgr_chru_datamodel:processor": {
+                "label": "Processor"
+              },
+              "kgr_chru_datamodel:opAreaId": {
+                "label": "Operational Area ID"
+              },
+              "kgr_chru_datamodel:buildingId": {
+                "label": "Building ID"
+              },
+              "kgr_chru_datamodel:buildingNr": {
+                "label": "Building Number"
+              },
+              "kgr_chru_datamodel:buildingName": {
+                "label": "Building Name"
+              },
+              "kgr_chru_datamodel:buildingUse": {
+                "label": "Use of Building bevore Event"
+              },
+              "kgr_chru_datamodel:historicUse": {
+                "label": "Historic Uses of Building"
+              },
+              "kgr_chru_datamodel:thwStatus": {
+                "label": "THW-Status"
+              },
+              "kgr_chru_datamodel:remoteAsessment": {
+                "label": "Remote Assessment (Date Completed)"
+              },
+              "kgr_chru_datamodel:outsideAssessment": {
+                "label": "Assessment from the Outside (Date Completed)"
+              },
+              "kgr_chru_datamodel:interiorInspection": {
+                "label": "Interior Inspection (Date Completed)"
+              },
+              "kgr_chru_datamodel:numberOfFloorAbove": {
+                "label": "Number of Floors above Groundlevel"
+              },
+              "kgr_chru_datamodel:knownFloorsBelow": {
+                "label": "Floors below"
+              },
+              "kgr_chru_datamodel:accessibility": {
+                "label": "Accessibility"
+              },
+              "kgr_chru_datamodel:numberOfFloorBelow": {
+                "label": "Number of Floors below Groundlevel"
+              },
+              "kgr_chru_datamodel:buildingArea": {
+                "label": "Gross Building Area (m²)"
+              },
+              "kgr_chru_datamodel:foundationType": {
+                "label": "Type of Foundation"
+              },
+              "kgr_chru_datamodel:foundationMaterials": {
+                "label": "Foundation Materials"
+              },
+              "kgr_chru_datamodel:foundationMaterialsOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:foundationDamage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:foundationDamageOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:foundationDamageExtend": {
+                "label": "Extent of Damage"
+              },
+              "kgr_chru_datamodel:foundationConditionClass": {
+                "label": "Condition Class"
+              },
+              "kgr_chru_datamodel:foundationRiskAssessment": {
+                "label": "Risk Assessment"
+              },
+              "kgr_chru_datamodel:foundationUrgencyClass": {
+                "label": "Urgency Class"
+              },
+              "kgr_chru_datamodel:foundationNotes": {
+                "label": "Notes and Recommendation"
+              },
+              "kgr_chru_datamodel:constructionType": {
+                "label": "Construction Type"
+              },
+              "kgr_chru_datamodel:constructionMaterials": {
+                "label": "Construction Materials"
+              },
+              "kgr_chru_datamodel:constructionMaterialsOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:constructionDamage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:constructionDamageOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:constructionDamageExtend": {
+                "label": "Extent of Damage"
+              },
+              "kgr_chru_datamodel:consructionConditionClass": {
+                "label": "Condition Class"
+              },
+              "kgr_chru_datamodel:constructionRiskAssessment": {
+                "label": "Risk Assessment"
+              },
+              "kgr_chru_datamodel:constructionUrgencyClass": {
+                "label": "Urgency Class"
+              },
+              "kgr_chru_datamodel:constructionNotes": {
+                "label": "Notes and Recommendation"
+              },
+              "kgr_chru_datamodel:facadeLoadBearing": {
+                "label": "Load Bearing"
+              },
+              "kgr_chru_datamodel:facadeMaterial": {
+                "label": "Material of Facade"
+              },
+              "kgr_chru_datamodel:facadeMaterialOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:facadeDamage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:facadeDamageOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:facadeDamageExtent": {
+                "label": "Extent of Damage"
+              },
+              "kgr_chru_datamodel:facadeConditionClass": {
+                "label": "Condition Class"
+              },
+              "kgr_chru_datamodel:facadeRiskAssessment": {
+                "label": "Risk Assesment"
+              },
+              "kgr_chru_datamodel:facadeUrgencyClass": {
+                "label": "Urgency Class"
+              },
+              "kgr_chru_datamodel:facadeNotes": {
+                "label": "Notes and Recommendation"
+              },
+              "kgr_chru_datamodel:roofType": {
+                "label": "Type of Roof"
+              },
+              "kgr_chru_datamodel:roofTypeOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:roofMaterialConstruction": {
+                "label": "Material of Roof Construction"
+              },
+              "kgr_chru_datamodel:roofMaterial": {
+                "label": "Material of Roofing"
+              },
+              "kgr_chru_datamodel:roofMaterialOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:roofDamage": {
+                "label": "Damage"
+              },
+              "kgr_chru_datamodel:roofDamageOther": {
+                "label": "Other Detail"
+              },
+              "kgr_chru_datamodel:roofDamageExtend": {
+                "label": "Extend of Damage"
+              },
+              "kgr_chru_datamodel:roofConditionClass": {
+                "label": "Condition Class"
+              },
+              "kgr_chru_datamodel:roofRiskAssessment": {
+                "label": "Risk Assessment"
+              },
+              "kgr_chru_datamodel:roofUrgencyClass": {
+                "label": "Urgency Class"
+              },
+              "kgr_chru_datamodel:roofNotes": {
+                "label": "Notes and Recommendation"
+              },
+              "kgr_chru_datamodel:recommendationClass": {
+                "label": "Recommendation Class"
+              },
+              "kgr_chru_datamodel:buildingNotes": {
+                "label": "Notes"
+              },
+              "kgr_chru_datamodel:uuid": {
+                "label": "UUID"
+              }
+            }
+          }
+        }
+      }
+    },
+    "projectLanguages": [
+      "en"
+    ],
+    "relations": {}
+  }
+}
